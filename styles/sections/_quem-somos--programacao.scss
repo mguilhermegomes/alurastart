@@ -1,0 +1,70 @@
+@use "../abstracts/index" as *;
+
+.quem-somos--programacao {
+    margin-top: 3.75rem;
+
+    > .container {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        > .quem-somos__texto {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            text-align: center;
+
+            > span {
+                @include section__subtitle;
+            }
+
+            > .quem-somos__titulo {
+                color: get-color(azul-escuro);
+                @include font-config(baijamjuree, h3, semibold, thight);
+
+                > span {
+                    color: get-color(roxo);
+                }
+            }
+        }
+
+        .quem-somos__lista {
+            display: flex;
+            flex-direction: column;
+            gap: 52px;
+
+            .lista__item {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+
+                .lista__item__icon {
+                    width: 48px;
+                    height: 48px;
+                }
+
+                .lista__item__texto {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+
+                    .lista__item__titulo {
+                        @include font-config(chakrapetch, default, bold);
+                    }
+                }
+
+                &:nth-child(1) > .lista__item__texto > .lista__item__titulo {
+                    color: get-color(vermelho);
+                }
+
+                &:nth-child(2) > .lista__item__texto > .lista__item__titulo {
+                    color: get-color(azul);
+                }
+
+                &:nth-child(3) > .lista__item__texto > .lista__item__titulo {
+                    color: get-color(verde);
+                }
+            }
+        }
+    }
+}

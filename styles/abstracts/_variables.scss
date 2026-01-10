@@ -41,7 +41,7 @@ $typography: (
     chakrapetch: (
         family: ("Chakra Petch", sans-serif),
         sizes: (
-            default: (min: 1.25rem, max: 1.25rem)  //20px
+            default: (min: 1.25rem, max: 1.25rem, fluid: 1vw),  //20px
         ),
     ),
     weights: (

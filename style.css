@@ -50,21 +50,19 @@
   gap: 16px;
 }
 .cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--conhecer, .cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--entrar {
-  padding: 0.875rem 2rem;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.75rem, 1vw, 0.875rem);
+  font-weight: 600;
+  line-height: normal;
   background: linear-gradient(90deg, #f6543b, #c75eeb);
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
   border-radius: 200px;
-  font-family: "Inter", sans-serif;
-  font-size: clamp(0.75rem, 1vw, 0.875rem);
-  font-weight: 600;
-  line-height: normal;
-}
-@media screen and (min-width: 768px) {
-  .cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--conhecer, .cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--entrar {
-    padding: 0.875rem 1rem;
-  }
+  padding: 1rem;
+  width: 300px;
+  padding: 0.875rem 0;
+  width: 147px;
 }
 .cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--entrar {
   display: none;
@@ -114,13 +112,13 @@
   line-height: 1.4;
 }
 .banner > .container .banner__texto .banner__acao {
-  padding: 1rem 0;
-  width: 300px;
   background: linear-gradient(90deg, #f6543b, #c75eeb);
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
   border-radius: 200px;
+  padding: 1rem;
+  width: 300px;
   font-family: "Inter", sans-serif;
   font-size: clamp(1rem, 1.2vw, 1.25rem);
   font-weight: 600;
@@ -128,6 +126,125 @@
 }
 .banner > .container .banner__img {
   display: none;
+}
+
+.quem-somos--educacao-basica {
+  margin-top: 3.75rem;
+}
+.quem-somos--educacao-basica > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.quem-somos--educacao-basica > .container > span {
+  color: #4ebfe9;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: clamp(1rem, 1vw, 1rem);
+  font-weight: 700;
+  line-height: normal;
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+}
+.quem-somos--educacao-basica > .container > .quem-somos__texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+.quem-somos--educacao-basica > .container > .quem-somos__texto > .quem-somos__titulo {
+  color: #284260;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: clamp(1.45rem, 2vw, 1.625rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.quem-somos--educacao-basica > .container > .quem-somos__texto > .quem-somos__titulo > span {
+  color: #c75eeb;
+}
+.quem-somos--educacao-basica > .container > .quem-somos__texto > .quem-somos__descricao > span {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  font-weight: 700;
+  line-height: normal;
+}
+.quem-somos--educacao-basica > .container > .quem-somos__texto > .quem-somos__acao {
+  background: linear-gradient(90deg, #f6543b, #c75eeb);
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 200px;
+  padding: 1rem;
+  width: 300px;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  font-weight: 600;
+  line-height: normal;
+}
+
+.quem-somos--programacao {
+  margin-top: 3.75rem;
+}
+.quem-somos--programacao > .container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.quem-somos--programacao > .container > .quem-somos__texto {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+.quem-somos--programacao > .container > .quem-somos__texto > span {
+  color: #4ebfe9;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: clamp(1rem, 1vw, 1rem);
+  font-weight: 700;
+  line-height: normal;
+}
+.quem-somos--programacao > .container > .quem-somos__texto > .quem-somos__titulo {
+  color: #284260;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: clamp(1.45rem, 2vw, 1.625rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+.quem-somos--programacao > .container > .quem-somos__texto > .quem-somos__titulo > span {
+  color: #c75eeb;
+}
+.quem-somos--programacao > .container .quem-somos__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+.quem-somos--programacao > .container .quem-somos__lista .lista__item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.quem-somos--programacao > .container .quem-somos__lista .lista__item .lista__item__icon {
+  width: 48px;
+  height: 48px;
+}
+.quem-somos--programacao > .container .quem-somos__lista .lista__item .lista__item__texto {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.quem-somos--programacao > .container .quem-somos__lista .lista__item .lista__item__texto .lista__item__titulo {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: clamp(1.25rem, 1vw, 1.25rem);
+  font-weight: 700;
+  line-height: normal;
+}
+.quem-somos--programacao > .container .quem-somos__lista .lista__item:nth-child(1) > .lista__item__texto > .lista__item__titulo {
+  color: #f6543b;
+}
+.quem-somos--programacao > .container .quem-somos__lista .lista__item:nth-child(2) > .lista__item__texto > .lista__item__titulo {
+  color: #4ebfe9;
+}
+.quem-somos--programacao > .container .quem-somos__lista .lista__item:nth-child(3) > .lista__item__texto > .lista__item__titulo {
+  color: #61e061;
 }
 
 * {

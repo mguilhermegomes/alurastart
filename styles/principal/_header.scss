@@ -46,12 +46,13 @@
                 gap: 16px;
 
                 .acoes__link--conhecer {
-                    padding: 0.875rem 2rem;
-                    @include botao-acao;
                     @include font-config(inter, paragraph-small, semibold);
-                    @include responsive(tablet) {
-                        padding: 0.875rem 1rem;
-                    }
+                    @include botao-acao;
+                    padding: 0.875rem 0;
+                    width: 147px;
+                    //@include responsive(tablet) {
+                    //    padding: 0.875rem 0;
+                    //}
                 }
 
                 .acoes__link--entrar {

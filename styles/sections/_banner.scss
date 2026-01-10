@@ -33,8 +33,6 @@
             }
 
             .banner__acao {
-                padding: 1rem 0;
-                width: 300px;
                 @include botao-acao;
                 @include font-config(inter, paragraph-large, semibold);
             }
