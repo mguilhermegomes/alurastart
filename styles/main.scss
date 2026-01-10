@@ -8,6 +8,7 @@
 @use "./sections/banner";
 @use "./sections/quem-somos--educacao-basica";
 @use "./sections/quem-somos--programacao";
+@use "./sections/sobre-nos";
 
 //rodape
 @use "./principal/footer";
@@ -21,7 +22,7 @@
 }
 
 body {
-    background-color: get-color(azul-baby);
+    background-color: get-color(branco);
     color: get-color(cinza);
     line-height: normal;
     width: 100%;

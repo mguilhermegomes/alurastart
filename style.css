@@ -247,6 +247,70 @@
   color: #61e061;
 }
 
+.sobre-nos {
+  margin-top: 3.75rem;
+}
+.sobre-nos .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.sobre-nos .container .sobre-nos__texto {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+.sobre-nos .container .sobre-nos__texto > span {
+  color: #4ebfe9;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: clamp(1rem, 1vw, 1rem);
+  font-weight: 700;
+  line-height: normal;
+}
+.sobre-nos .container .sobre-nos__texto .sobre-nos__titulo {
+  color: #284260;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: clamp(1.45rem, 2vw, 1.625rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+.sobre-nos .container .sobre-nos__texto .sobre-nos__titulo > span {
+  color: #c75eeb;
+}
+.sobre-nos .container .sobre-nos__lista {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.sobre-nos .container .sobre-nos__lista .lista__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background-color: #f4f7ff;
+  border-radius: 10px;
+  padding: 1.25rem 0 0.625rem 0;
+  width: 300px;
+}
+.sobre-nos .container .sobre-nos__lista .lista__item > span {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: clamp(1.45rem, 2vw, 1.625rem);
+  font-weight: 600;
+  line-height: normal;
+}
+.sobre-nos .container .sobre-nos__lista .lista__item:nth-child(1) > span {
+  color: #4ebfe9;
+}
+.sobre-nos .container .sobre-nos__lista .lista__item:nth-child(2) > span {
+  color: #c75eeb;
+}
+.sobre-nos .container .sobre-nos__lista .lista__item:nth-child(3) > span {
+  color: #61e061;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -254,7 +318,7 @@
 }
 
 body {
-  background-color: #f4f7ff;
+  background-color: #ffffff;
   color: #6e859f;
   line-height: normal;
   width: 100%;
