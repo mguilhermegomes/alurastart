@@ -34,7 +34,7 @@
             }
 
             > .quem-somos__acao {
-                @include botao-acao;
+                @include botao-acao-gradiente;
                 @include font-config(inter, paragraph-large, semibold);
             }
         }

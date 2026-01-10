@@ -1,6 +1,7 @@
 $colors: (
     preto: #000000,
     branco: #ffffff,
+    branco-gradiente: #e7edf5,
     cinza-escuro: #384652,
     cinza: #6e859f,
     azul-escuro: #284260,
@@ -12,6 +13,7 @@ $colors: (
     amarelo: #fac900,
     rosa-baby: #ffc7f3,
     gradiente-vermelho-roxo: linear-gradient(90deg, #f6543b, #c75eeb),
+    gradiente-branco-branco-gradiente: linear-gradient(180deg, #ffffff, #e7edf5),
 );
 
 $breakpoints: (
@@ -35,6 +37,7 @@ $typography: (
         family: ("Inter", sans-serif),
         sizes: (
             paragraph-large: (min: 1rem, max: 1.25rem, fluid: 1.2vw),       //16px---20px
+            paragraph: (min: 0.875rem, max: 1rem, fluid: 1vw),
             paragraph-small: (min: 0.75rem, max: 0.875rem, fluid: 1vw),   //12px---14px
         ),
     ),

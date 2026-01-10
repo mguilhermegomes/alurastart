@@ -1,0 +1,41 @@
+@use "../abstracts/index" as *;
+
+.metodologia {
+    margin-top: 3.75rem;
+    background: get-color(gradiente-branco-branco-gradiente);
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        > span {
+            align-self: flex-start;
+            margin-bottom: 0.5rem;
+            @include section__subtitle;
+        }
+
+        .metodologia__texto {
+            display: flex;
+            flex-direction: column;
+            gap: 34px;
+            margin-bottom: 2.5rem;
+
+            .metodologia__titulo {
+                color: get-color(azul-escuro);
+                @include font-config(baijamjuree, h3, semibold, thight);
+
+                > span {
+                    color: get-color(verde);
+                }
+            }
+        }
+
+        .metodologia__acao {
+            @include botao-acao-transparent;
+            padding: 0.875rem 3.55rem;
+            margin-top: 2.5rem;
+            @include font-config(inter, paragraph, semibold, thight);
+        }
+    }
+}

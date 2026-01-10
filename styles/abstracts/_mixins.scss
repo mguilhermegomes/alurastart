@@ -15,7 +15,7 @@
     };
 }
 
-@mixin botao-acao {
+@mixin botao-acao-gradiente {
     background: f.get-color(gradiente-vermelho-roxo);
     color: f.get-color(branco);
     text-transform: uppercase;
@@ -23,6 +23,13 @@
     border-radius: 200px;
     padding: 1rem;
     width: 300px;
+}
+
+@mixin botao-acao-transparent {
+    @include botao-acao-gradiente;
+    background: transparent;
+    color: f.get-color(roxo);
+    border: 1px solid f.get-color(roxo);
 }
 
 @mixin section__subtitle {

@@ -47,7 +47,7 @@
 
                 .acoes__link--conhecer {
                     @include font-config(inter, paragraph-small, semibold);
-                    @include botao-acao;
+                    @include botao-acao-gradiente;
                     padding: 0.875rem 0;
                     width: 147px;
                     //@include responsive(tablet) {
@@ -56,11 +56,8 @@
                 }
 
                 .acoes__link--entrar {
-                    @extend .acoes__link--conhecer;
                     display: none;
-                    background: transparent;
-                    color: get-color(roxo);
-                    border: 1px solid get-color(roxo);
+                    @include botao-acao-transparent;
                     @include responsive(desktop) {
                         display: block;
                     }

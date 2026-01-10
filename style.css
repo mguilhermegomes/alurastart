@@ -49,7 +49,7 @@
   display: flex;
   gap: 16px;
 }
-.cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--conhecer, .cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--entrar {
+.cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--conhecer {
   font-family: "Inter", sans-serif;
   font-size: clamp(0.75rem, 1vw, 0.875rem);
   font-weight: 600;
@@ -66,6 +66,13 @@
 }
 .cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--entrar {
   display: none;
+  background: linear-gradient(90deg, #f6543b, #c75eeb);
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 200px;
+  padding: 1rem;
+  width: 300px;
   background: transparent;
   color: #c75eeb;
   border: 1px solid #c75eeb;
@@ -309,6 +316,59 @@
 }
 .sobre-nos .container .sobre-nos__lista .lista__item:nth-child(3) > span {
   color: #61e061;
+}
+
+.metodologia {
+  margin-top: 3.75rem;
+  background: linear-gradient(180deg, #ffffff, #e7edf5);
+}
+.metodologia .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.metodologia .container > span {
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+  color: #4ebfe9;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: clamp(1rem, 1vw, 1rem);
+  font-weight: 700;
+  line-height: normal;
+}
+.metodologia .container .metodologia__texto {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  margin-bottom: 2.5rem;
+}
+.metodologia .container .metodologia__texto .metodologia__titulo {
+  color: #284260;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: clamp(1.45rem, 2vw, 1.625rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+.metodologia .container .metodologia__texto .metodologia__titulo > span {
+  color: #61e061;
+}
+.metodologia .container .metodologia__acao {
+  background: linear-gradient(90deg, #f6543b, #c75eeb);
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 200px;
+  padding: 1rem;
+  width: 300px;
+  background: transparent;
+  color: #c75eeb;
+  border: 1px solid #c75eeb;
+  padding: 0.875rem 3.55rem;
+  margin-top: 2.5rem;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.875rem, 1vw, 1rem);
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 * {
