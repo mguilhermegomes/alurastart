@@ -1,0 +1,59 @@
+$colors: (
+    preto: #000000,
+    branco: #ffffff,
+    cinza-escuro: #384652,
+    cinza: #6e859f,
+    azul-escuro: #284260,
+    azul-baby: #f4f7ff,
+    azul: #4ebfe9,
+    roxo: #c75eeb,
+    vermelho: #f6543b,
+    verde: #61e061,
+    amarelo: #fac900,
+    rosa-baby: #ffc7f3,
+    gradiente-vermelho-roxo: linear-gradient(90deg, #f6543b, #c75eeb),
+);
+
+$breakpoints: (
+    mobile: 428px,
+    tablet: 768px,
+    desktop: 1200px,
+);
+
+$typography: (
+    baijamjuree: (
+        family: ("Bai Jamjuree", sans-serif),
+        sizes: (
+            h1: (min: 2.25rem, max: 3.75rem, fluid: 4vw),        //36px---60px
+            h2: (min: 1.75rem, max: 2rem, fluid: 2.5vw),          //28px---32px
+            h3: (min: 1.45rem, max: 1.625rem, fluid: 2vw),     //23.2px---26px
+            h4: (min: 1.125rem, max: 1.25rem, fluid: 1.5vw),    //18px---20px
+            h5: (min: 1rem, max: 1rem, fluid: 1vw),          //16px
+        ),
+    ),
+    inter: (
+        family: ("Inter", sans-serif),
+        sizes: (
+            paragraph-large: (min: 1rem, max: 1.25rem, fluid: 1.2vw),       //16px---20px
+            paragraph-small: (min: 0.75rem, max: 0.875rem, fluid: 1vw),   //12px---14px
+        ),
+    ),
+    chakrapetch: (
+        family: ("Chakra Petch", sans-serif),
+        sizes: (
+            default: (min: 1.25rem, max: 1.25rem)  //20px
+        ),
+    ),
+    weights: (
+        regular: 400,
+        medium: 500,
+        semibold: 600,
+        bold: 700,
+    ),
+    line-heights: (
+        auto: normal,
+        thight: 1.2,
+        default: 1.4,
+        loose: 1.6,
+    ),
+);

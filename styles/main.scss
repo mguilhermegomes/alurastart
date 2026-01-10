@@ -1,0 +1,45 @@
+//abstracts
+@use "./abstracts/index" as *;
+
+//cabecalho
+@use "./principal/header";
+
+//sections
+@use "./sections/banner";
+
+//rodape
+@use "./principal/footer";
+
+//--------------------------------------------------------------------------------------------------------------
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: get-color(azul-baby);
+    color: get-color(cinza);
+    line-height: normal;
+    width: 100%;
+    min-height: 100vh;
+    @include font-config(inter, paragraph-large, regular, auto);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 75rem;
+    padding-inline: 1.5rem;
+    margin-inline: auto;
+}

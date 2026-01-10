@@ -1,0 +1,45 @@
+@use "sass:map";
+@use "sass:math";
+@use "./variables" as v;
+
+@function font-family($family) {
+    @return map.get(map.get(v.$typography, $family), family);
+}
+
+@function fluid-font-size($family, $size) {
+    $family-map: map.get(v.$typography, $family);
+
+    @if $family-map == null {
+        @error "Font-family #{$family} não existe em $typography";
+    }
+
+    $sizes-map: map.get($family-map, sizes);
+    $config: map.get($sizes-map, $size);
+
+    @if $config == null {
+        @error "Font-size #{$size} não existe em #{$family}";
+    }
+
+    $min: map.get($config, min);
+    $max: map.get($config, max);
+    $fluid: map.get($config, fluid);
+
+
+    @return clamp($min, $fluid, $max);
+}
+
+@function font-weight($weight) {
+    @return map.get(map.get(v.$typography, weights), $weight);
+}
+
+@function line-height($line-height) {
+    @return map.get(map.get(v.$typography, line-heights), $line-height);
+}
+
+@function breakpoint($size) {
+    @return map.get(v.$breakpoints, $size);
+}
+
+@function get-color($color) {
+    @return map.get(v.$colors, $color);
+}

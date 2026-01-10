@@ -1,0 +1,74 @@
+@use "../abstracts/index" as *;
+
+.cabecalho {
+    padding-top: 1.5rem;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid get-color(roxo);
+        padding-bottom: 1.75rem;
+        @include responsive(tablet) {
+            justify-content: center;
+            gap: 32px;
+        }
+        @include responsive(desktop) {
+            justify-content: space-between;
+            gap: 0;
+        }
+
+        .cabecalho__nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+
+            .nav__links {
+                display: none;
+                @include responsive(tablet) {
+                    display: block;
+                }
+
+                .links__lista {
+                    display: flex;
+                    align-items: center;
+                    gap: 24px;
+
+                    .nav__link {
+                        color: get-color(cinza);
+                        @include font-config(inter, paragraph-small, medium);
+                    }
+                }
+            }
+            
+            .nav__acoes {
+                display: flex;
+                gap: 16px;
+
+                .acoes__link--conhecer {
+                    background: get-color(gradiente-vermelho-roxo);
+                    color: get-color(branco);
+                    text-transform: uppercase;
+                    text-align: center;
+                    border-radius: 200px;
+                    padding: 0.875rem 2rem;
+                    @include font-config(inter, paragraph-small, semibold);
+                    @include responsive(tablet) {
+                        padding: 0.875rem 1rem;
+                    }
+                }
+
+                .acoes__link--entrar {
+                    @extend .acoes__link--conhecer;
+                    display: none;
+                    background: transparent;
+                    color: get-color(roxo);
+                    border: 1px solid get-color(roxo);
+                    @include responsive(desktop) {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
