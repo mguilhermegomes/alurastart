@@ -1,0 +1,47 @@
+@use "../abstracts/index" as *;
+
+.banner {
+    background-image: url("/assets/banner/detalhes-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    > .container {
+        display: flex;
+        justify-content: center;
+        gap: 64px;
+        padding: 7% 1.5rem;
+
+        .banner__texto {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+            text-align: center;
+
+            .banner__titulo {
+                color: get-color(azul-escuro);
+                @include font-config(baijamjuree, h2, bold, thight);
+
+                > span {
+                    color: get-color(roxo);
+                }
+            }
+
+            .banner__descricao {
+                @include font-config(inter, paragraph-large, medium, default);
+            }
+
+            .banner__acao {
+                padding: 1rem 0;
+                width: 300px;
+                @include botao-acao;
+                @include font-config(inter, paragraph-large, semibold);
+            }
+        }
+
+        .banner__img {
+            display: none;
+        }
+    }
+}

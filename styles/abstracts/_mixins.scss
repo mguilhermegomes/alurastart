@@ -14,3 +14,11 @@
         @content
     };
 }
+
+@mixin botao-acao {
+    background: f.get-color(gradiente-vermelho-roxo);
+    color: f.get-color(branco);
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 200px;
+}

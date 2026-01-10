@@ -1,7 +1,7 @@
 .cabecalho {
   padding-top: 1.5rem;
 }
-.cabecalho .container {
+.cabecalho > .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,73 +9,125 @@
   padding-bottom: 1.75rem;
 }
 @media screen and (min-width: 768px) {
-  .cabecalho .container {
+  .cabecalho > .container {
     justify-content: center;
     gap: 32px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .cabecalho .container {
+  .cabecalho > .container {
     justify-content: space-between;
     gap: 0;
   }
 }
-.cabecalho .container .cabecalho__nav {
+.cabecalho > .container .cabecalho__nav {
   display: flex;
   align-items: center;
   gap: 32px;
 }
-.cabecalho .container .cabecalho__nav .nav__links {
+.cabecalho > .container .cabecalho__nav .nav__links {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .cabecalho .container .cabecalho__nav .nav__links {
+  .cabecalho > .container .cabecalho__nav .nav__links {
     display: block;
   }
 }
-.cabecalho .container .cabecalho__nav .nav__links .links__lista {
+.cabecalho > .container .cabecalho__nav .nav__links .links__lista {
   display: flex;
   align-items: center;
   gap: 24px;
 }
-.cabecalho .container .cabecalho__nav .nav__links .links__lista .nav__link {
+.cabecalho > .container .cabecalho__nav .nav__links .links__lista .nav__link {
   color: #6e859f;
   font-family: "Inter", sans-serif;
   font-size: clamp(0.75rem, 1vw, 0.875rem);
   font-weight: 500;
   line-height: normal;
 }
-.cabecalho .container .cabecalho__nav .nav__acoes {
+.cabecalho > .container .cabecalho__nav .nav__acoes {
   display: flex;
   gap: 16px;
 }
-.cabecalho .container .cabecalho__nav .nav__acoes .acoes__link--conhecer, .cabecalho .container .cabecalho__nav .nav__acoes .acoes__link--entrar {
+.cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--conhecer, .cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--entrar {
+  padding: 0.875rem 2rem;
   background: linear-gradient(90deg, #f6543b, #c75eeb);
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
   border-radius: 200px;
-  padding: 0.875rem 2rem;
   font-family: "Inter", sans-serif;
   font-size: clamp(0.75rem, 1vw, 0.875rem);
   font-weight: 600;
   line-height: normal;
 }
 @media screen and (min-width: 768px) {
-  .cabecalho .container .cabecalho__nav .nav__acoes .acoes__link--conhecer, .cabecalho .container .cabecalho__nav .nav__acoes .acoes__link--entrar {
+  .cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--conhecer, .cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--entrar {
     padding: 0.875rem 1rem;
   }
 }
-.cabecalho .container .cabecalho__nav .nav__acoes .acoes__link--entrar {
+.cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--entrar {
   display: none;
   background: transparent;
   color: #c75eeb;
   border: 1px solid #c75eeb;
 }
 @media screen and (min-width: 1200px) {
-  .cabecalho .container .cabecalho__nav .nav__acoes .acoes__link--entrar {
+  .cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--entrar {
     display: block;
   }
+}
+
+.banner {
+  background-image: url("/assets/banner/detalhes-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.banner > .container {
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  padding: 7% 1.5rem;
+}
+.banner > .container .banner__texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+}
+.banner > .container .banner__texto .banner__titulo {
+  color: #284260;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: clamp(1.75rem, 2.5vw, 2rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.banner > .container .banner__texto .banner__titulo > span {
+  color: #c75eeb;
+}
+.banner > .container .banner__texto .banner__descricao {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  font-weight: 500;
+  line-height: 1.4;
+}
+.banner > .container .banner__texto .banner__acao {
+  padding: 1rem 0;
+  width: 300px;
+  background: linear-gradient(90deg, #f6543b, #c75eeb);
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 200px;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  font-weight: 600;
+  line-height: normal;
+}
+.banner > .container .banner__img {
+  display: none;
 }
 
 * {
