@@ -12,8 +12,12 @@ $colors: (
     verde: #61e061,
     amarelo: #fac900,
     rosa-baby: #ffc7f3,
-    gradiente-vermelho-roxo: linear-gradient(90deg, #f6543b, #c75eeb),
-    gradiente-branco-branco-gradiente: linear-gradient(180deg, #ffffff, #e7edf5),
+
+);
+
+$gradients: (
+    gradiente-vermelho-roxo: linear-gradient(90deg, #f6543b 0%, #c75eeb 100%),
+    gradiente-branco-branco-gradiente: linear-gradient(180deg, #ffffff 0%, #e7edf5 100%),
 );
 
 $breakpoints: (

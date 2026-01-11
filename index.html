@@ -389,7 +389,115 @@
           <div class="swiper-scrollbar"></div>
         </div>
         <div class="container container__acao">
-            <a href="#" class="projetos__acao">Quero conhecer</a>
+          <a href="#" class="projetos__acao">Quero conhecer</a>
+        </div>
+      </section>
+      <section class="orcamento">
+        <div class="container">
+          <div class="orcamento__texto">
+            <img src="assets/logo-e-fav/logo-branco.png" alt="Logo da Alura" />
+            <span>_tenha a Alura Start na sua escola</span>
+            <h2 class="orcamento__titulo">
+              Transforme sua escola com nossas
+              <span>soluções inovadoras</span>
+            </h2>
+          </div>
+          <div class="orcamento__container">
+            <h3 class="form__titulo">_solicite um orçamento personalizado</h3>
+            <form class="orcamento__form" id="formulario-orcamento">
+              <div class="form__campo">
+                <label for="form-campo-nome">Nome *</label>
+                <input
+                  type="text"
+                  name="Nome"
+                  id="form-campo-nome"
+                  class="campo__nome"
+                  placeholder="Informe o seu nome"
+                  required
+                />
+              </div>
+              <div class="form__campo">
+                <label for="form-campo-email">Email *</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="form-campo-email"
+                  class="campo__email"
+                  placeholder="Informe seu email institucional"
+                  required
+                />
+              </div>
+              <div class="form__campo">
+                <label for="form-campo-escola">Escola *</label>
+                <input
+                  type="text"
+                  name="escola"
+                  id="form-campo-escola"
+                  class="campo__escola"
+                  placeholder="Informe o nome da Escola em que trabalha"
+                  required
+                />
+              </div>
+              <div class="form__campo">
+                <label for="form-campo-cargo">Cargo *</label>
+                <select
+                  name="cargo"
+                  id="form-campo-cargo"
+                  class="campo__cargo"
+                  required
+                >
+                  <option value="" disabled selected>
+                    Selecione o seu cargo nessa Escola
+                  </option>
+                  <option value="diretor">Diretor</option>
+                  <option value="coordenador">Coordenador</option>
+                  <option value="professor">Professor</option>
+                </select>
+              </div>
+              <div class="form__campo">
+                <label for="form-campo-telefone">Telefone com DDD *</label>
+                <input
+                  type="tel"
+                  name="telefone"
+                  id="form-campo-telefone"
+                  class="campo__telefone"
+                  placeholder="Informe seu telefone para contato"
+                  required
+                />
+              </div>
+              <div class="form__campo">
+                <label for="form-campo-necessidades"
+                  >Descreva as necessidades da sua escola *</label
+                >
+                <textarea
+                  name="necessidades"
+                  rows="5"
+                  id="form-campo-necessidades"
+                  class="campo__necessidades"
+                  placeholder="Conte-nos brevemente sobre a quantidade de alunos, interesses e as expectativas da sua escola"
+                  required
+                ></textarea>
+              </div>
+              <div class="form__campo">
+                <label for="form-campo-captcha">Quanto é 1 + 11?</label>
+                <input
+                  type="text"
+                  name="captcha"
+                  id="form-campo-captcha"
+                  class="campo__captcha"
+                  placeholder="Informe a resposta"
+                  required
+                />
+              </div>
+              <button
+                name="solicitar orçamento"
+                class="form__botao"
+                id="form-botao-solicitar"
+              >
+                Solicitar Orçamento
+              </button>
+            </form>
+          </div>
         </div>
       </section>
     </main>

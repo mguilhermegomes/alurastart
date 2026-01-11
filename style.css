@@ -55,7 +55,7 @@
   font-weight: 600;
   line-height: normal;
   display: block;
-  background: linear-gradient(90deg, #f6543b, #c75eeb);
+  background: linear-gradient(90deg, #f6543b 0%, #c75eeb 100%);
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
@@ -67,7 +67,7 @@
 }
 .cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--entrar {
   display: block;
-  background: linear-gradient(90deg, #f6543b, #c75eeb);
+  background: linear-gradient(90deg, #f6543b 0%, #c75eeb 100%);
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
@@ -122,7 +122,7 @@
 }
 .banner > .container .banner__texto .banner__acao {
   display: block;
-  background: linear-gradient(90deg, #f6543b, #c75eeb);
+  background: linear-gradient(90deg, #f6543b 0%, #c75eeb 100%);
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
@@ -179,7 +179,7 @@
 }
 .quem-somos--educacao-basica > .container > .quem-somos__texto > .quem-somos__acao {
   display: block;
-  background: linear-gradient(90deg, #f6543b, #c75eeb);
+  background: linear-gradient(90deg, #f6543b 0%, #c75eeb 100%);
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
@@ -325,7 +325,7 @@
 .metodologia {
   margin-top: 3.75rem;
   padding-bottom: 5rem;
-  background: linear-gradient(180deg, #ffffff, #e7edf5);
+  background: linear-gradient(180deg, #ffffff 0%, #e7edf5 100%);
 }
 .metodologia .container {
   display: flex;
@@ -359,7 +359,7 @@
 }
 .metodologia .container .metodologia__acao {
   display: block;
-  background: linear-gradient(90deg, #f6543b, #c75eeb);
+  background: linear-gradient(90deg, #f6543b 0%, #c75eeb 100%);
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
@@ -465,13 +465,175 @@
 }
 .projetos .container__acao .projetos__acao {
   display: block;
-  background: linear-gradient(90deg, #f6543b, #c75eeb);
+  background: linear-gradient(90deg, #f6543b 0%, #c75eeb 100%);
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
   border-radius: 200px;
   padding: 1rem;
   width: 300px;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  font-weight: 600;
+  line-height: normal;
+}
+
+.orcamento {
+  padding: 3rem 0 1.25rem 0;
+  background-image: url("/assets/orcamento/orcamento-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left -30%;
+}
+.orcamento .container .orcamento__texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+}
+.orcamento .container .orcamento__texto > span {
+  color: #4ebfe9;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: clamp(1rem, 1vw, 1rem);
+  font-weight: 700;
+  line-height: normal;
+  color: #fac900;
+}
+.orcamento .container .orcamento__texto .orcamento__titulo {
+  color: #f4f7ff;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: clamp(1.45rem, 2vw, 1.625rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+.orcamento .container .orcamento__texto .orcamento__titulo > span {
+  color: #ffc7f3;
+}
+.orcamento .orcamento__container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+.orcamento .orcamento__container .form__titulo {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #f6543b;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: clamp(1rem, 1vw, 1rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.orcamento .orcamento__container .orcamento__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.orcamento .orcamento__container .orcamento__form .form__campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.orcamento .orcamento__container .orcamento__form .form__campo > label {
+  color: #284260;
+}
+.orcamento .orcamento__container .orcamento__form .form__campo > input {
+  background-color: #f4f7ff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 0 0.75rem 0.75rem;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.875rem, 1vw, 1rem);
+  font-weight: 400;
+  line-height: normal;
+}
+.orcamento .orcamento__container .orcamento__form .form__campo > input::placeholder {
+  color: #6e859f;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.75rem, 1vw, 0.875rem);
+  font-weight: 500;
+  line-height: normal;
+}
+.orcamento .orcamento__container .orcamento__form .form__campo > input:focus {
+  outline: 2px solid #000000;
+}
+.orcamento .orcamento__container .orcamento__form .form__campo:nth-child(4) {
+  position: relative;
+}
+.orcamento .orcamento__container .orcamento__form .form__campo:nth-child(4)::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 92%;
+  background-image: url("/assets/orcamento/Slider.png");
+  background-repeat: no-repeat;
+  transform: translateY(95%) rotate(0deg);
+  transition: transform 0.3s ease;
+}
+.orcamento .orcamento__container .orcamento__form .form__campo:nth-child(4):focus-within::after {
+  transform: translateY(95%) rotate(180deg);
+}
+.orcamento .orcamento__container .orcamento__form .form__campo:nth-child(4) .campo__cargo {
+  background-color: #f4f7ff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 0 0.75rem 0.75rem;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.875rem, 1vw, 1rem);
+  font-weight: 400;
+  line-height: normal;
+}
+.orcamento .orcamento__container .orcamento__form .form__campo:nth-child(4) .campo__cargo::placeholder {
+  color: #6e859f;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.75rem, 1vw, 0.875rem);
+  font-weight: 500;
+  line-height: normal;
+}
+.orcamento .orcamento__container .orcamento__form .form__campo:nth-child(4) .campo__cargo:focus {
+  outline: 2px solid #000000;
+}
+.orcamento .orcamento__container .orcamento__form .form__campo:nth-child(4) .campo__cargo {
+  color: #284260;
+  appearance: none;
+}
+.orcamento .orcamento__container .orcamento__form .form__campo .campo__necessidades {
+  background-color: #f4f7ff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 0 0.75rem 0.75rem;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.875rem, 1vw, 1rem);
+  font-weight: 400;
+  line-height: normal;
+}
+.orcamento .orcamento__container .orcamento__form .form__campo .campo__necessidades::placeholder {
+  color: #6e859f;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.75rem, 1vw, 0.875rem);
+  font-weight: 500;
+  line-height: normal;
+}
+.orcamento .orcamento__container .orcamento__form .form__campo .campo__necessidades:focus {
+  outline: 2px solid #000000;
+}
+.orcamento .orcamento__container .orcamento__form .form__botao {
+  display: block;
+  background: linear-gradient(90deg, #f6543b 0%, #c75eeb 100%);
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 200px;
+  padding: 1rem;
+  width: 300px;
+  width: 280px;
+  border: none;
   font-family: "Inter", sans-serif;
   font-size: clamp(1rem, 1.2vw, 1.25rem);
   font-weight: 600;

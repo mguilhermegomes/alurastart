@@ -43,3 +43,7 @@
 @function get-color($color) {
     @return map.get(v.$colors, $color);
 }
+
+@function get-gradient($gradient) {
+    @return map.get(v.$gradients, $gradient);
+}

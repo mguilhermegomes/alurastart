@@ -17,7 +17,7 @@
 
 @mixin botao-acao-gradiente {
     display: block;
-    background: f.get-color(gradiente-vermelho-roxo);
+    background: f.get-gradient(gradiente-vermelho-roxo);
     color: f.get-color(branco);
     text-transform: uppercase;
     text-align: center;
@@ -36,4 +36,22 @@
 @mixin section__subtitle {
     color: f.get-color(azul);
     @include font-config(baijamjuree, h5, bold);
+}
+
+@mixin campo--input {
+    background-color: f.get-color(azul-baby);
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem 0 0.75rem 0.75rem;
+    color: f.get-color(preto);
+    @include font-config(inter, paragraph);
+
+    &::placeholder {
+        color: f.get-color(cinza);
+        @include font-config(inter, paragraph-small, medium);
+    }
+
+    &:focus {
+        outline: 2px solid f.get-color(preto);
+    }
 }
