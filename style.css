@@ -634,9 +634,53 @@
   width: 300px;
   width: 280px;
   border: none;
+  cursor: pointer;
   font-family: "Inter", sans-serif;
   font-size: clamp(1rem, 1.2vw, 1.25rem);
   font-weight: 600;
+  line-height: normal;
+}
+
+.rodape {
+  margin: 2rem 0;
+}
+.rodape .container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.rodape .container .rodape__logo {
+  width: 140px;
+}
+.rodape .container .rodape__texto {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.rodape .container .rodape__texto .rodape__info > p {
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.75rem, 1vw, 0.875rem);
+  font-weight: 400;
+  line-height: normal;
+}
+.rodape .container .rodape__links > .links__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-transform: uppercase;
+}
+.rodape .container .rodape__links > .links__lista .lista__item:nth-child(1) {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  font-weight: 600;
+  line-height: normal;
+}
+.rodape .container .rodape__links > .links__lista .lista__item .nav__link {
+  color: #384652;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.75rem, 1vw, 0.875rem);
+  font-weight: 400;
   line-height: normal;
 }
 

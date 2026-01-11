@@ -28,7 +28,7 @@
   <body>
     <header class="cabecalho">
       <div class="container">
-        <a href="/" class="cabecalho__logo">
+        <a href="index.html" class="cabecalho__logo">
           <picture>
             <source
               media="(min-width: 1200px)"
@@ -501,7 +501,31 @@
         </div>
       </section>
     </main>
-    <footer class="rodape"></footer>
+    <footer class="rodape">
+    <div class="container">
+        <div class="rodape__texto">
+        <a href="index.html" class="rodape__logo">
+            <img src="./assets/logo-e-fav/logo-large.png" alt="">
+        </a>
+          <div class="rodape__info">
+            <p>AOVS Sistemas de Informática</p>
+            <p>S.A</p>
+            <p>CNPJ 05.555.382/0001-33</p>
+          </div>
+        </div>
+        <nav class="rodape__links">
+            <ul class="links__lista">
+                <li class="lista__item lista__titulo">Alura Start</li>
+                <li class="lista__item">
+                    <a href="#" class="nav__link">Login</a>
+                </li>
+                <li class="lista__item">
+                    <a href="#" class="nav__link">Termos de uso</a>
+                </li>
+            </ul>
+        </nav>
+      </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper(".swiper", {

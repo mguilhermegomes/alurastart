@@ -1,0 +1,44 @@
+@use "../abstracts/index" as *;
+
+.rodape {
+    margin: 2rem 0;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        .rodape__logo {
+            width: 140px;
+        }
+
+        .rodape__texto {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .rodape__info > p {
+                text-transform: uppercase;
+                @include font-config(inter, paragraph-small);
+            }
+        }
+
+        .rodape__links > .links__lista {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-transform: uppercase;
+
+            .lista__item {
+                &:nth-child(1) {
+                    @include font-config(inter, paragraph-large, semibold);
+                }
+
+                .nav__link {
+                    color: get-color(cinza-escuro);
+                    @include font-config(inter, paragraph-small);
+                }
+            }
+        }
+    }
+}

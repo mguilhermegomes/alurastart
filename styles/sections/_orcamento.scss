@@ -99,6 +99,7 @@
                 @include botao-acao-gradiente;
                 width: 280px;
                 border: none;
+                cursor: pointer;
                 @include font-config(inter, paragraph-large, semibold);
             }
         }
