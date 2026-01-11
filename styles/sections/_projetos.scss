@@ -1,0 +1,101 @@
+@use "../abstracts/index" as *;
+
+.projetos {
+    margin: 3.75rem 0;
+
+    > .container {
+        .projetos__texto {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            text-align: center;
+
+            > span {
+                @include section__subtitle;
+            }
+
+            .projetos__titulo {
+                color: get-color(azul-escuro);
+                @include font-config(baijamjuree, h3, semibold, thight);
+
+                > span {
+                    color: get-color(roxo);
+                }
+            }
+        }
+    }
+
+    .swiper {
+        position: relative;
+        padding-inline: 1.5rem;   
+        padding-bottom: 1.8rem;
+        margin: 2rem 0 3rem 0;
+
+        .swiper-wrapper {
+            .swiper-slide {
+                width: 300px;
+
+                .projeto {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    border: 1px solid get-color(azul);
+                    border-radius: 10px;
+                    padding: 1rem;
+
+                    .projeto__texto {
+                        .projeto__titulo {
+                            margin-bottom: 3px;
+                            color: get-color(azul-escuro);
+                            @include font-config(inter, paragraph-large, semibold);
+                        }
+
+                        .projeto__info {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .info__acao {
+                                color: get-color(roxo);
+                            }
+
+                            > span {
+                                background-color: get-color(azul-baby);
+                                border-radius: 16px;
+                                padding: 0.5rem 1rem;
+                                text-transform: uppercase;
+                                @include font-config(inter, paragraph-small, semibold);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .swiper-pagination {
+            position: absolute;
+            bottom: 0;
+
+            .swiper-pagination-bullet {
+                background: get-color(azul);
+            }
+        }
+
+       .swiper-button-prev,
+       .swiper-button-next,
+       .swiper-scrollbar {
+            display: none;
+       }
+    }
+
+    .container__acao {
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+
+        .projetos__acao {
+            @include botao-acao-gradiente;
+            @include font-config(inter, paragraph-large, semibold);
+        }
+    }
+}

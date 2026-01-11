@@ -56,8 +56,8 @@
                 }
 
                 .acoes__link--entrar {
-                    display: none;
                     @include botao-acao-transparent;
+                    display: none;
                     @include responsive(desktop) {
                         display: block;
                     }

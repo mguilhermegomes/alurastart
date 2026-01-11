@@ -54,6 +54,7 @@
   font-size: clamp(0.75rem, 1vw, 0.875rem);
   font-weight: 600;
   line-height: normal;
+  display: block;
   background: linear-gradient(90deg, #f6543b, #c75eeb);
   color: #ffffff;
   text-transform: uppercase;
@@ -65,7 +66,7 @@
   width: 147px;
 }
 .cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--entrar {
-  display: none;
+  display: block;
   background: linear-gradient(90deg, #f6543b, #c75eeb);
   color: #ffffff;
   text-transform: uppercase;
@@ -76,6 +77,7 @@
   background: transparent;
   color: #c75eeb;
   border: 1px solid #c75eeb;
+  display: none;
 }
 @media screen and (min-width: 1200px) {
   .cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--entrar {
@@ -119,6 +121,7 @@
   line-height: 1.4;
 }
 .banner > .container .banner__texto .banner__acao {
+  display: block;
   background: linear-gradient(90deg, #f6543b, #c75eeb);
   color: #ffffff;
   text-transform: uppercase;
@@ -175,6 +178,7 @@
   line-height: normal;
 }
 .quem-somos--educacao-basica > .container > .quem-somos__texto > .quem-somos__acao {
+  display: block;
   background: linear-gradient(90deg, #f6543b, #c75eeb);
   color: #ffffff;
   text-transform: uppercase;
@@ -320,6 +324,7 @@
 
 .metodologia {
   margin-top: 3.75rem;
+  padding-bottom: 5rem;
   background: linear-gradient(180deg, #ffffff, #e7edf5);
 }
 .metodologia .container {
@@ -353,6 +358,7 @@
   color: #61e061;
 }
 .metodologia .container .metodologia__acao {
+  display: block;
   background: linear-gradient(90deg, #f6543b, #c75eeb);
   color: #ffffff;
   text-transform: uppercase;
@@ -369,6 +375,107 @@
   font-size: clamp(0.875rem, 1vw, 1rem);
   font-weight: 600;
   line-height: 1.2;
+}
+
+.projetos {
+  margin: 3.75rem 0;
+}
+.projetos > .container .projetos__texto {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+.projetos > .container .projetos__texto > span {
+  color: #4ebfe9;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: clamp(1rem, 1vw, 1rem);
+  font-weight: 700;
+  line-height: normal;
+}
+.projetos > .container .projetos__texto .projetos__titulo {
+  color: #284260;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: clamp(1.45rem, 2vw, 1.625rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+.projetos > .container .projetos__texto .projetos__titulo > span {
+  color: #c75eeb;
+}
+.projetos .swiper {
+  position: relative;
+  padding-inline: 1.5rem;
+  padding-bottom: 1.8rem;
+  margin: 2rem 0 3rem 0;
+}
+.projetos .swiper .swiper-wrapper .swiper-slide {
+  width: 300px;
+}
+.projetos .swiper .swiper-wrapper .swiper-slide .projeto {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid #4ebfe9;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.projetos .swiper .swiper-wrapper .swiper-slide .projeto .projeto__texto .projeto__titulo {
+  margin-bottom: 3px;
+  color: #284260;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  font-weight: 600;
+  line-height: normal;
+}
+.projetos .swiper .swiper-wrapper .swiper-slide .projeto .projeto__texto .projeto__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.projetos .swiper .swiper-wrapper .swiper-slide .projeto .projeto__texto .projeto__info .info__acao {
+  color: #c75eeb;
+}
+.projetos .swiper .swiper-wrapper .swiper-slide .projeto .projeto__texto .projeto__info > span {
+  background-color: #f4f7ff;
+  border-radius: 16px;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.75rem, 1vw, 0.875rem);
+  font-weight: 600;
+  line-height: normal;
+}
+.projetos .swiper .swiper-pagination {
+  position: absolute;
+  bottom: 0;
+}
+.projetos .swiper .swiper-pagination .swiper-pagination-bullet {
+  background: #4ebfe9;
+}
+.projetos .swiper .swiper-button-prev,
+.projetos .swiper .swiper-button-next,
+.projetos .swiper .swiper-scrollbar {
+  display: none;
+}
+.projetos .container__acao {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+.projetos .container__acao .projetos__acao {
+  display: block;
+  background: linear-gradient(90deg, #f6543b, #c75eeb);
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 200px;
+  padding: 1rem;
+  width: 300px;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  font-weight: 600;
+  line-height: normal;
 }
 
 * {
