@@ -21,12 +21,15 @@
         .cabecalho__nav {
             display: flex;
             align-items: center;
-            gap: 32px;
+            gap: 22px;
+            @include responsive(laptop) {
+                gap: 32px;
+            }
 
             .nav__links {
                 display: none;
                 @include responsive(tablet) {
-                    display: block;
+                    display: inline-block;
                 }
 
                 .links__lista {
@@ -34,9 +37,27 @@
                     align-items: center;
                     gap: 24px;
 
-                    .nav__link {
-                        color: get-color(cinza);
-                        @include font-config(inter, paragraph-small, medium);
+                    .lista__item {
+                        &:nth-child(6) {
+                            @include responsive(desktop) {
+                                display: none;
+                            }
+                        }
+
+                        &:nth-child(7) {
+                            display: none;
+                            @include responsive(desktop) {
+                                display: inline;
+                            }
+                        }
+
+                        .nav__link {
+                            color: get-color(cinza);
+                            @include font-config(inter, paragraph-small, medium);
+                            @include responsive(desktop) {
+                                @include font-config(inter, paragraph, medium);
+                            }
+                        }
                     }
                 }
             }
@@ -50,16 +71,19 @@
                     @include botao-acao-gradiente;
                     padding: 0.875rem 0;
                     width: 147px;
-                    //@include responsive(tablet) {
-                    //    padding: 0.875rem 0;
-                    //}
+                    @include responsive(desktop) {
+                        width: 180px;
+                        @include font-config(inter, paragraph, semibold);
+                    }
                 }
 
                 .acoes__link--entrar {
                     @include botao-acao-transparent;
                     display: none;
+                    @include font-config(inter, paragraph, semibold);
                     @include responsive(desktop) {
-                        display: block;
+                        display: flex;
+                        width: 112px;
                     }
                 }
             }

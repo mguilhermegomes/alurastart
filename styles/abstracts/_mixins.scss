@@ -16,7 +16,9 @@
 }
 
 @mixin botao-acao-gradiente {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: f.get-gradient(gradiente-vermelho-roxo);
     color: f.get-color(branco);
     text-transform: uppercase;

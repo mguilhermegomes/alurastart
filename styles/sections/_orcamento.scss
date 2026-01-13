@@ -97,6 +97,7 @@
 
             .form__botao {
                 @include botao-acao-gradiente;
+                align-self: center;
                 width: 280px;
                 border: none;
                 cursor: pointer;
