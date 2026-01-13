@@ -138,7 +138,6 @@
 .banner > .container {
   display: flex;
   justify-content: center;
-  gap: 64px;
   padding: 7% 1.5rem;
 }
 .banner > .container .banner__texto {
@@ -148,12 +147,25 @@
   gap: 32px;
   text-align: center;
 }
+@media screen and (min-width: 1200px) {
+  .banner > .container .banner__texto {
+    text-align: start;
+  }
+}
 .banner > .container .banner__texto .banner__titulo {
   color: #284260;
   font-family: "Bai Jamjuree", sans-serif;
   font-size: clamp(1.75rem, 2.5vw, 2rem);
   font-weight: 700;
   line-height: 1.2;
+}
+@media screen and (min-width: 768px) {
+  .banner > .container .banner__texto .banner__titulo {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: clamp(2.25rem, 4vw, 3.75rem);
+    font-weight: 700;
+    line-height: 1.2;
+  }
 }
 .banner > .container .banner__texto .banner__titulo > span {
   color: #c75eeb;
@@ -163,6 +175,14 @@
   font-size: clamp(1rem, 1.2vw, 1.25rem);
   font-weight: 500;
   line-height: 1.4;
+}
+@media screen and (min-width: 768px) {
+  .banner > .container .banner__texto .banner__descricao {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(1.25rem, 1vw, 1.25rem);
+    font-weight: 400;
+    line-height: 1.4;
+  }
 }
 .banner > .container .banner__texto .banner__acao {
   display: flex;
@@ -180,8 +200,18 @@
   font-weight: 600;
   line-height: normal;
 }
+@media screen and (min-width: 1200px) {
+  .banner > .container .banner__texto .banner__acao {
+    align-self: flex-start;
+  }
+}
 .banner > .container .banner__img {
   display: none;
+}
+@media screen and (min-width: 1200px) {
+  .banner > .container .banner__img {
+    display: block;
+  }
 }
 
 .quem-somos--educacao-basica {
