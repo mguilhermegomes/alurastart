@@ -536,9 +536,10 @@
       const swiper = new Swiper(".swiper", {
         slidesPerView: "auto",
         spaceBetween: 16,
-        watchOverflow: true,
         centeredSlides: true,
         centeredSlidesBounds: true,
+        
+        watchOverflow: true,
 
         // If we need pagination
         pagination: {
@@ -555,6 +556,13 @@
         // And if we need scrollbar
         scrollbar: {
           el: ".swiper-scrollbar",
+        },
+
+        // breakpoints
+        breakpoints: {
+          2312: {
+            enabled: false,
+          },
         },
       });
     </script>

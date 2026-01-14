@@ -4,11 +4,21 @@
     margin: 3.75rem 0;
 
     > .container {
+        display: flex;
+        justify-content: center;
+
         .projetos__texto {
             display: flex;
             flex-direction: column;
             gap: 8px;
             text-align: center;
+            max-width: get-txtcontainer(default);
+            @include responsive(laptop) {
+                max-width: get-txtcontainer(medium-large);
+            }
+            @include responsive(desktop) {
+                max-width: get-txtcontainer(extra-big-large);
+            }
 
             > span {
                 @include section__subtitle;
@@ -17,6 +27,12 @@
             .projetos__titulo {
                 color: get-color(azul-escuro);
                 @include font-config(baijamjuree, h3, semibold, thight);
+                @include responsive(tablet) {
+                    @include font-config(baijamjuree, h2, bold, thight);
+                }
+                @include responsive(laptop) {
+                    @include font-config(baijamjuree, h1, bold, thight);
+                }
 
                 > span {
                     color: get-color(roxo);
@@ -34,6 +50,9 @@
         .swiper-wrapper {
             .swiper-slide {
                 width: 300px;
+                @include responsive(tablet) {
+                    width: 440px;
+                }
 
                 .projeto {
                     display: flex;
@@ -48,6 +67,9 @@
                             margin-bottom: 3px;
                             color: get-color(azul-escuro);
                             @include font-config(inter, paragraph-large, semibold);
+                            @include responsive(tablet) {
+                                @include font-config(chakrapetch, default, semibold, thight);
+                            }
                         }
 
                         .projeto__info {
@@ -82,7 +104,20 @@
         }
 
        .swiper-button-prev,
-       .swiper-button-next,
+       .swiper-button-next {
+            display: none;
+            @include responsive(laptop) {
+                display: block;
+                color: get-color(roxo);
+                transition: color 0.3s ease;
+
+                &:hover,
+                &:focus {
+                    color: get-color(azul);
+                }
+            }
+       }
+
        .swiper-scrollbar {
             display: none;
        }
