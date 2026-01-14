@@ -14,7 +14,7 @@
     gap: 32px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
   .cabecalho > .container {
     justify-content: space-between;
     gap: 0;
@@ -63,7 +63,7 @@
   font-weight: 500;
   line-height: normal;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
   .cabecalho > .container .cabecalho__nav .nav__links .links__lista .lista__item .nav__link {
     font-family: "Inter", sans-serif;
     font-size: clamp(0.875rem, 1vw, 1rem);
@@ -93,13 +93,18 @@
   padding: 0.875rem 0;
   width: 147px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
   .cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--conhecer {
-    width: 180px;
+    width: 165px;
     font-family: "Inter", sans-serif;
     font-size: clamp(0.875rem, 1vw, 1rem);
     font-weight: 600;
     line-height: normal;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--conhecer {
+    width: 180px;
   }
 }
 .cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--entrar {

@@ -13,7 +13,7 @@
             justify-content: center;
             gap: 32px;
         }
-        @include responsive(desktop) {
+        @include responsive(laptop) {
             justify-content: space-between;
             gap: 0;
         }
@@ -54,7 +54,7 @@
                         .nav__link {
                             color: get-color(cinza);
                             @include font-config(inter, paragraph-small, medium);
-                            @include responsive(desktop) {
+                            @include responsive(laptop) {
                                 @include font-config(inter, paragraph, medium);
                             }
                         }
@@ -71,9 +71,12 @@
                     @include botao-acao-gradiente;
                     padding: 0.875rem 0;
                     width: 147px;
+                    @include responsive(laptop) {
+                        width: 165px;
+                        @include font-config(inter, paragraph, semibold);
+                    }
                     @include responsive(desktop) {
                         width: 180px;
-                        @include font-config(inter, paragraph, semibold);
                     }
                 }
 
