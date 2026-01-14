@@ -6,37 +6,72 @@
     background: get-gradient(gradiente-branco-branco-gradiente);
 
     .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        > span {
-            align-self: flex-start;
-            margin-bottom: 0.5rem;
-            @include section__subtitle;
-        }
-
-        .metodologia__texto {
+        &:nth-child(1) {
             display: flex;
             flex-direction: column;
+            align-items: center;
             gap: 34px;
-            margin-bottom: 2.5rem;
+            @include responsive(laptop) {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            @include responsive(desktop-large) {
+                align-items: flex-start;
+            }
 
-            .metodologia__titulo {
-                color: get-color(azul-escuro);
-                @include font-config(baijamjuree, h3, semibold, thight);
+            .metodologia__texto {
+                display: flex;
+                flex-direction: column;
+                @include responsive(laptop) {
+                    max-width: get-txtcontainer(large);
+                }
+                @include responsive(desktop-large) {
+                    max-width: get-txtcontainer(medium-large);
+                }
 
                 > span {
-                    color: get-color(verde);
+                    margin-bottom: 0.5rem;
+                    @include section__subtitle;
+                }
+
+                .metodologia__titulo {
+                    margin-bottom: 2.125rem;
+                    color: get-color(azul-escuro);
+                    @include font-config(baijamjuree, h3, semibold, thight);
+                    @include responsive(tablet) {
+                        @include font-config(baijamjuree, h2, bold, thight);
+                    }
+                    @include responsive(laptop) {
+                        @include font-config(baijamjuree, h1, bold, thight);
+                    }
+                    
+
+                    > span {
+                        color: get-color(verde);
+                    }
+                }
+            }
+
+            > picture {
+                @include responsive(desktop) {
+                    width: 50%;
                 }
             }
         }
 
-        .metodologia__acao {
-            @include botao-acao-transparent;
-            padding: 0.875rem 3.55rem;
-            margin-top: 2.5rem;
-            @include font-config(inter, paragraph, semibold, thight);
+        &:nth-child(2) {
+            display: flex;
+            justify-content: center;
+
+            .metodologia__acao {
+                @include botao-acao-transparent;
+                padding: 0.875rem 3.55rem;
+                margin-top: 2.5rem;
+                @include font-config(inter, paragraph, semibold, thight);
+                @include responsive(tablet) {
+                    width: 430px;
+                }
+            }
         }
     }
 }

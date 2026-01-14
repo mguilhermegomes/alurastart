@@ -1,5 +1,6 @@
 $text__containers: (
     big-large: 40rem,
+    medium-large: 34rem,
     large: 32rem,
     default: 26rem,
     small: 20rem,
@@ -32,12 +33,14 @@ $breakpoints: (
     tablet: 768px,
     laptop: 1024px,
     desktop: 1200px,
+    desktop-large: 1400px,
 );
 
 $typography: (
     baijamjuree: (
         family: ("Bai Jamjuree", sans-serif),
         sizes: (
+            hmax: (min: 3.75rem, max: 3.75rem, fluid: 1vw),
             h1: (min: 2.25rem, max: 3.75rem, fluid: 4vw),        //36px---60px
             h2: (min: 1.75rem, max: 2rem, fluid: 2.5vw),          //28px---32px
             h3: (min: 1.45rem, max: 1.625rem, fluid: 2vw),     //23.2px---26px
