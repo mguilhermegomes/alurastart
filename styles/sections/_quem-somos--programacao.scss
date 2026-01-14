@@ -6,11 +6,18 @@
     > .container {
         display: flex;
         flex-direction: column;
-        gap: 25px;
+        gap: 32px;
+        @include responsive(tablet) {
+            gap: 48px;
+        }
+        @include responsive(desktop) {
+            gap: 60px;
+        }
 
         > .quem-somos__texto {
             display: flex;
             flex-direction: column;
+            align-items: center;
             gap: 8px;
             text-align: center;
 
@@ -20,7 +27,14 @@
 
             > .quem-somos__titulo {
                 color: get-color(azul-escuro);
+                max-width: get-txtcontainer(big-large);
                 @include font-config(baijamjuree, h3, semibold, thight);
+                @include responsive(tablet) {
+                    @include font-config(baijamjuree, h2, bold, thight);
+                }
+                @include responsive(laptop) {
+                    @include font-config(baijamjuree, h1, bold, thight);
+                }
 
                 > span {
                     color: get-color(roxo);
@@ -30,13 +44,19 @@
 
         .quem-somos__lista {
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
             gap: 52px;
+            @include responsive(tablet) {
+                justify-content: center;
+            }
 
             .lista__item {
                 display: flex;
                 flex-direction: column;
                 gap: 24px;
+                @include responsive(tablet) {
+                    max-width: get-txtcontainer(small);
+                }
 
                 .lista__item__icon {
                     width: 48px;

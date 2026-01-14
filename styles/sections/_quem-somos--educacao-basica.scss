@@ -7,22 +7,43 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        > span {
-            @include section__subtitle;
-            align-self: flex-start;
-            margin-bottom: 0.5rem;
+        @include responsive(tablet) {
+            gap: 50px;
+        }
+        @include responsive(laptop) {
+            justify-content: space-between;
+            flex-direction: row-reverse;
         }
 
         > .quem-somos__texto {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 32px;
+            @include responsive(tablet) {
+                align-items: flex-start;
+            }
+            @include responsive(laptop) {
+                max-width: get-txtcontainer(large);
+            }
+
+            > h2,p[class*="quem-somos"] {
+                margin-bottom: 2rem;
+            }
+
+            > span {
+                margin-bottom: 0.5rem;
+                @include section__subtitle;
+            }
 
             > .quem-somos__titulo {
                 color: get-color(azul-escuro);
                 @include font-config(baijamjuree, h3, bold, thight);
+                @include responsive(tablet) {
+                    @include font-config(baijamjuree, h2, bold, thight);
+                };
+                @include responsive(laptop) {
+                    @include font-config(baijamjuree, h1, bold, thight);
+                }
 
                 > span {
                     color: get-color(roxo);
@@ -36,7 +57,14 @@
             > .quem-somos__acao {
                 @include botao-acao-gradiente;
                 @include font-config(inter, paragraph-large, semibold);
+                @include responsive(tablet) {
+                    align-self: center;
+                }
+                @include responsive(laptop) {
+                    align-self: flex-start;
+                }
             }
         }
+
     }
 }

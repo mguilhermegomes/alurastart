@@ -222,20 +222,42 @@
   flex-direction: column;
   align-items: center;
 }
-.quem-somos--educacao-basica > .container > span {
-  color: #4ebfe9;
-  font-family: "Bai Jamjuree", sans-serif;
-  font-size: clamp(1rem, 1vw, 1rem);
-  font-weight: 700;
-  line-height: normal;
-  align-self: flex-start;
-  margin-bottom: 0.5rem;
+@media screen and (min-width: 768px) {
+  .quem-somos--educacao-basica > .container {
+    gap: 50px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .quem-somos--educacao-basica > .container {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
 }
 .quem-somos--educacao-basica > .container > .quem-somos__texto {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
+}
+@media screen and (min-width: 768px) {
+  .quem-somos--educacao-basica > .container > .quem-somos__texto {
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .quem-somos--educacao-basica > .container > .quem-somos__texto {
+    max-width: 32rem;
+  }
+}
+.quem-somos--educacao-basica > .container > .quem-somos__texto > h2, .quem-somos--educacao-basica > .container > .quem-somos__texto p[class*=quem-somos] {
+  margin-bottom: 2rem;
+}
+.quem-somos--educacao-basica > .container > .quem-somos__texto > span {
+  margin-bottom: 0.5rem;
+  color: #4ebfe9;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: clamp(1rem, 1vw, 1rem);
+  font-weight: 700;
+  line-height: normal;
 }
 .quem-somos--educacao-basica > .container > .quem-somos__texto > .quem-somos__titulo {
   color: #284260;
@@ -243,6 +265,22 @@
   font-size: clamp(1.45rem, 2vw, 1.625rem);
   font-weight: 700;
   line-height: 1.2;
+}
+@media screen and (min-width: 768px) {
+  .quem-somos--educacao-basica > .container > .quem-somos__texto > .quem-somos__titulo {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: clamp(1.75rem, 2.5vw, 2rem);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .quem-somos--educacao-basica > .container > .quem-somos__texto > .quem-somos__titulo {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: clamp(2.25rem, 4vw, 3.75rem);
+    font-weight: 700;
+    line-height: 1.2;
+  }
 }
 .quem-somos--educacao-basica > .container > .quem-somos__texto > .quem-somos__titulo > span {
   color: #c75eeb;
@@ -269,6 +307,16 @@
   font-weight: 600;
   line-height: normal;
 }
+@media screen and (min-width: 768px) {
+  .quem-somos--educacao-basica > .container > .quem-somos__texto > .quem-somos__acao {
+    align-self: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .quem-somos--educacao-basica > .container > .quem-somos__texto > .quem-somos__acao {
+    align-self: flex-start;
+  }
+}
 
 .quem-somos--programacao {
   margin-top: 3.75rem;
@@ -276,11 +324,22 @@
 .quem-somos--programacao > .container {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 32px;
+}
+@media screen and (min-width: 768px) {
+  .quem-somos--programacao > .container {
+    gap: 48px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .quem-somos--programacao > .container {
+    gap: 60px;
+  }
 }
 .quem-somos--programacao > .container > .quem-somos__texto {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 8px;
   text-align: center;
 }
@@ -293,23 +352,50 @@
 }
 .quem-somos--programacao > .container > .quem-somos__texto > .quem-somos__titulo {
   color: #284260;
+  max-width: 40rem;
   font-family: "Bai Jamjuree", sans-serif;
   font-size: clamp(1.45rem, 2vw, 1.625rem);
   font-weight: 600;
   line-height: 1.2;
+}
+@media screen and (min-width: 768px) {
+  .quem-somos--programacao > .container > .quem-somos__texto > .quem-somos__titulo {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: clamp(1.75rem, 2.5vw, 2rem);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .quem-somos--programacao > .container > .quem-somos__texto > .quem-somos__titulo {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: clamp(2.25rem, 4vw, 3.75rem);
+    font-weight: 700;
+    line-height: 1.2;
+  }
 }
 .quem-somos--programacao > .container > .quem-somos__texto > .quem-somos__titulo > span {
   color: #c75eeb;
 }
 .quem-somos--programacao > .container .quem-somos__lista {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 52px;
+}
+@media screen and (min-width: 768px) {
+  .quem-somos--programacao > .container .quem-somos__lista {
+    justify-content: center;
+  }
 }
 .quem-somos--programacao > .container .quem-somos__lista .lista__item {
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+@media screen and (min-width: 768px) {
+  .quem-somos--programacao > .container .quem-somos__lista .lista__item {
+    max-width: 20rem;
+  }
 }
 .quem-somos--programacao > .container .quem-somos__lista .lista__item .lista__item__icon {
   width: 48px;

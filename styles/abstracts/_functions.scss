@@ -47,3 +47,7 @@
 @function get-gradient($gradient) {
     @return map.get(v.$gradients, $gradient);
 }
+
+@function get-txtcontainer($text-container) {
+    @return map.get(v.$text__containers, $text-container);
+}
