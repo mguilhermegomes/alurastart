@@ -870,22 +870,51 @@
   background-image: url("/assets/orcamento/orcamento-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: left -30%;
+}
+.orcamento .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  .orcamento .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .orcamento .container .orcamento__texto {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
   text-align: center;
+  max-width: 26rem;
+}
+@media screen and (min-width: 1024px) {
+  .orcamento .container .orcamento__texto {
+    align-items: start;
+    text-align: start;
+    max-width: 32rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .orcamento .container .orcamento__texto {
+    max-width: 38rem;
+  }
 }
 .orcamento .container .orcamento__texto > span {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   color: #4ebfe9;
   font-family: "Bai Jamjuree", sans-serif;
   font-size: clamp(1rem, 1vw, 1rem);
   font-weight: 700;
   line-height: normal;
   color: #fac900;
+}
+@media screen and (min-width: 1024px) {
+  .orcamento .container .orcamento__texto > span {
+    margin-top: 5rem;
+  }
 }
 .orcamento .container .orcamento__texto .orcamento__titulo {
   color: #f4f7ff;
@@ -894,16 +923,54 @@
   font-weight: 600;
   line-height: 1.2;
 }
+@media screen and (min-width: 768px) {
+  .orcamento .container .orcamento__texto .orcamento__titulo {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: clamp(1.75rem, 2.5vw, 2rem);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .orcamento .container .orcamento__texto .orcamento__titulo {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: clamp(2.25rem, 4vw, 3.75rem);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .orcamento .container .orcamento__texto .orcamento__titulo {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: clamp(3.75rem, 1vw, 3.75rem);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+}
 .orcamento .container .orcamento__texto .orcamento__titulo > span {
   color: #ffc7f3;
 }
-.orcamento .orcamento__container {
+.orcamento .container .orcamento__texto .orcamento__email__laptop {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .orcamento .container .orcamento__texto .orcamento__email__laptop {
+    display: flex;
+  }
+}
+.orcamento .container .orcamento__container {
   background-color: #ffffff;
   border-radius: 12px;
   padding: 1rem;
   margin-top: 2rem;
 }
-.orcamento .orcamento__container .form__titulo {
+@media screen and (min-width: 768px) {
+  .orcamento .container .orcamento__container {
+    margin-top: 2.5rem;
+    width: 28rem;
+  }
+}
+.orcamento .container .orcamento__container .form__titulo {
   margin-bottom: 1rem;
   text-align: center;
   color: #f6543b;
@@ -912,20 +979,20 @@
   font-weight: 700;
   line-height: 1.2;
 }
-.orcamento .orcamento__container .orcamento__form {
+.orcamento .container .orcamento__container .orcamento__form {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-.orcamento .orcamento__container .orcamento__form .form__campo {
+.orcamento .container .orcamento__container .orcamento__form .form__campo {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
-.orcamento .orcamento__container .orcamento__form .form__campo > label {
+.orcamento .container .orcamento__container .orcamento__form .form__campo > label {
   color: #284260;
 }
-.orcamento .orcamento__container .orcamento__form .form__campo > input {
+.orcamento .container .orcamento__container .orcamento__form .form__campo > input {
   background-color: #f4f7ff;
   border: none;
   border-radius: 4px;
@@ -936,20 +1003,20 @@
   font-weight: 400;
   line-height: normal;
 }
-.orcamento .orcamento__container .orcamento__form .form__campo > input::placeholder {
+.orcamento .container .orcamento__container .orcamento__form .form__campo > input::placeholder {
   color: #6e859f;
   font-family: "Inter", sans-serif;
   font-size: clamp(0.75rem, 1vw, 0.875rem);
   font-weight: 500;
   line-height: normal;
 }
-.orcamento .orcamento__container .orcamento__form .form__campo > input:focus {
+.orcamento .container .orcamento__container .orcamento__form .form__campo > input:focus {
   outline: 2px solid #000000;
 }
-.orcamento .orcamento__container .orcamento__form .form__campo:nth-child(4) {
+.orcamento .container .orcamento__container .orcamento__form .form__campo:nth-child(4) {
   position: relative;
 }
-.orcamento .orcamento__container .orcamento__form .form__campo:nth-child(4)::after {
+.orcamento .container .orcamento__container .orcamento__form .form__campo:nth-child(4)::after {
   content: "";
   position: absolute;
   width: 10px;
@@ -961,10 +1028,10 @@
   transform: translateY(95%) rotate(0deg);
   transition: transform 0.3s ease;
 }
-.orcamento .orcamento__container .orcamento__form .form__campo:nth-child(4):focus-within::after {
+.orcamento .container .orcamento__container .orcamento__form .form__campo:nth-child(4):focus-within::after {
   transform: translateY(95%) rotate(180deg);
 }
-.orcamento .orcamento__container .orcamento__form .form__campo:nth-child(4) .campo__cargo {
+.orcamento .container .orcamento__container .orcamento__form .form__campo:nth-child(4) .campo__cargo {
   background-color: #f4f7ff;
   border: none;
   border-radius: 4px;
@@ -975,21 +1042,21 @@
   font-weight: 400;
   line-height: normal;
 }
-.orcamento .orcamento__container .orcamento__form .form__campo:nth-child(4) .campo__cargo::placeholder {
+.orcamento .container .orcamento__container .orcamento__form .form__campo:nth-child(4) .campo__cargo::placeholder {
   color: #6e859f;
   font-family: "Inter", sans-serif;
   font-size: clamp(0.75rem, 1vw, 0.875rem);
   font-weight: 500;
   line-height: normal;
 }
-.orcamento .orcamento__container .orcamento__form .form__campo:nth-child(4) .campo__cargo:focus {
+.orcamento .container .orcamento__container .orcamento__form .form__campo:nth-child(4) .campo__cargo:focus {
   outline: 2px solid #000000;
 }
-.orcamento .orcamento__container .orcamento__form .form__campo:nth-child(4) .campo__cargo {
+.orcamento .container .orcamento__container .orcamento__form .form__campo:nth-child(4) .campo__cargo {
   color: #284260;
   appearance: none;
 }
-.orcamento .orcamento__container .orcamento__form .form__campo .campo__necessidades {
+.orcamento .container .orcamento__container .orcamento__form .form__campo .campo__necessidades {
   background-color: #f4f7ff;
   border: none;
   border-radius: 4px;
@@ -1000,17 +1067,17 @@
   font-weight: 400;
   line-height: normal;
 }
-.orcamento .orcamento__container .orcamento__form .form__campo .campo__necessidades::placeholder {
+.orcamento .container .orcamento__container .orcamento__form .form__campo .campo__necessidades::placeholder {
   color: #6e859f;
   font-family: "Inter", sans-serif;
   font-size: clamp(0.75rem, 1vw, 0.875rem);
   font-weight: 500;
   line-height: normal;
 }
-.orcamento .orcamento__container .orcamento__form .form__campo .campo__necessidades:focus {
+.orcamento .container .orcamento__container .orcamento__form .form__campo .campo__necessidades:focus {
   outline: 2px solid #000000;
 }
-.orcamento .orcamento__container .orcamento__form .form__botao {
+.orcamento .container .orcamento__container .orcamento__form .form__botao {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1029,6 +1096,30 @@
   font-size: clamp(1rem, 1.2vw, 1.25rem);
   font-weight: 600;
   line-height: normal;
+}
+.orcamento .container .orcamento__email {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .orcamento .container .orcamento__email {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .orcamento .container .orcamento__email {
+    display: none;
+  }
+}
+.orcamento .container .orcamento__email .orcamento__acao {
+  color: #dfe3e7;
+  transition: color 0.3s ease;
+}
+.orcamento .container .orcamento__email .orcamento__acao:hover, .orcamento .container .orcamento__email .orcamento__acao:focus {
+  color: #4ebfe9;
 }
 
 .rodape {

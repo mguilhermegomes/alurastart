@@ -5,103 +5,166 @@
     background-image: url("/assets/orcamento/orcamento-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: left -30%;
 
     .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include responsive(laptop) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
         .orcamento__texto {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 32px;
             text-align: center;
+            max-width: get-txtcontainer(default);
+            @include responsive(laptop) {
+                align-items: start;
+                text-align: start;
+                max-width: get-txtcontainer(large);
+            }
+            @include responsive(desktop) {
+                max-width: get-txtcontainer(extra-medium-large)
+            }
 
             > span {
+                margin-top: 2rem;
+                margin-bottom: 1rem;
                 @include section__subtitle;
                 color: get-color(amarelo);
+                @include responsive(laptop) {
+                    margin-top: 5rem;
+                }
             }
 
             .orcamento__titulo {
                 color: get-color(azul-baby);
                 @include font-config(baijamjuree, h3, semibold, thight);
+                @include responsive(tablet) {
+                    @include font-config(baijamjuree, h2, bold, thight);
+                }
+                @include responsive(laptop) {
+                    @include font-config(baijamjuree, h1, semibold, thight);
+                }
+                @include responsive(desktop) {
+                    @include font-config(baijamjuree, hmax, semibold, thight);
+                }
 
                 > span {
                     color: get-color(rosa-baby);
                 }
             }
-        }
-    }
 
-    .orcamento__container {
-        background-color: get-color(branco);
-        border-radius: 12px;
-        padding: 1rem;
-        margin-top: 2rem;
-
-        .form__titulo {
-            margin-bottom: 1rem;
-            text-align: center;
-            color: get-color(vermelho);
-            @include font-config(baijamjuree, h5, bold, thight);
-        }
-
-        .orcamento__form {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-
-            .form__campo {
-                display: flex;
-                flex-direction: column;
-                gap: 6px;
-
-                > label {
-                    color: get-color(azul-escuro);
-                    //@include font-config(inter, paragraph);
-                }
-
-                > input {
-                    @include campo--input;
-                }
-
-                &:nth-child(4) {
-                    position: relative;
-
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        width: 10px;
-                        height: 10px;
-                        top: 50%;
-                        left: 92%;
-                        background-image: url("/assets/orcamento/Slider.png");
-                        background-repeat: no-repeat;
-                        transform: translateY(95%) rotate(0deg);
-                        transition: transform 0.3s ease;
-                    }
-
-                    &:focus-within::after {
-                        transform: translateY(95%) rotate(180deg);
-                    }
-
-                    .campo__cargo {
-                        @include campo--input;
-                        color: get-color(azul-escuro);
-                        appearance: none;
-                    }
-                }
-
-                .campo__necessidades {
-                    @include campo--input;
+            .orcamento__email__laptop {
+                display: none;
+                @include responsive(laptop) {
+                    display: flex;
                 }
             }
+        }
 
-            .form__botao {
-                @include botao-acao-gradiente;
-                align-self: center;
-                width: 280px;
-                border: none;
-                cursor: pointer;
-                @include font-config(inter, paragraph-large, semibold);
+        .orcamento__container {
+            background-color: get-color(branco);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-top: 2rem;
+            @include responsive(tablet) {
+                margin-top: 2.5rem;
+                width: 28rem;
+            }
+
+            .form__titulo {
+                margin-bottom: 1rem;
+                text-align: center;
+                color: get-color(vermelho);
+                @include font-config(baijamjuree, h5, bold, thight);
+            }
+
+            .orcamento__form {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                .form__campo {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+
+                    > label {
+                        color: get-color(azul-escuro);
+                    }
+
+                    > input {
+                        @include campo--input;
+                    }
+
+                    &:nth-child(4) {
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            width: 10px;
+                            height: 10px;
+                            top: 50%;
+                            left: 92%;
+                            background-image: url("/assets/orcamento/Slider.png");
+                            background-repeat: no-repeat;
+                            transform: translateY(95%) rotate(0deg);
+                            transition: transform 0.3s ease;
+                        }
+
+                        &:focus-within::after {
+                            transform: translateY(95%) rotate(180deg);
+                        }
+
+                        .campo__cargo {
+                            @include campo--input;
+                            color: get-color(azul-escuro);
+                            appearance: none;
+                        }
+                    }
+
+                    .campo__necessidades {
+                        @include campo--input;
+                    }
+                }
+
+                .form__botao {
+                    @include botao-acao-gradiente;
+                    align-self: center;
+                    width: 280px;
+                    border: none;
+                    cursor: pointer;
+                    @include font-config(inter, paragraph-large, semibold);
+                }
+            }
+        }
+
+        .orcamento__email {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-top: 2.5rem;
+            @include responsive(tablet) {
+                display: flex;
+            }
+            @include responsive(laptop) {
+                display: none;
+            }
+
+            .orcamento__acao {
+                color: get-color(neutro);
+                transition: color 0.3s ease;
+
+                &:hover,
+                &:focus {
+                    color: get-color(azul);
+                }     
             }
         }
     }
