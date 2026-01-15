@@ -27,14 +27,20 @@
 
             > .quem-somos__titulo {
                 color: get-color(azul-escuro);
-                max-width: get-txtcontainer(big-large);
+                max-width: get-txtcontainer(large);
                 @include font-config(baijamjuree, h3, semibold, thight);
                 @include responsive(tablet) {
                     @include font-config(baijamjuree, h2, bold, thight);
                 }
                 @include responsive(laptop) {
+                    max-width: get-txtcontainer(big-large);
                     @include font-config(baijamjuree, h1, bold, thight);
                 }
+                @include responsive(desktop) {
+                    max-width: get-txtcontainer(ultra-big-large);
+                    @include font-config(baijamjuree, hmax, bold, thight);
+                }
+
 
                 > span {
                     color: get-color(roxo);

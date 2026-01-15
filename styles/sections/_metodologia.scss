@@ -11,21 +11,19 @@
             flex-direction: column;
             align-items: center;
             gap: 34px;
-            @include responsive(laptop) {
+            @include responsive(tablet) {
                 flex-direction: row;
                 justify-content: space-between;
-            }
-            @include responsive(desktop-large) {
-                align-items: flex-start;
             }
 
             .metodologia__texto {
                 display: flex;
                 flex-direction: column;
-                @include responsive(laptop) {
-                    max-width: get-txtcontainer(large);
+                @include responsive(tablet) {
+                    flex-basis: 50%;
                 }
-                @include responsive(desktop-large) {
+                @include responsive(laptop) {
+                    flex-basis: 100%;
                     max-width: get-txtcontainer(medium-large);
                 }
 
@@ -43,6 +41,9 @@
                     }
                     @include responsive(laptop) {
                         @include font-config(baijamjuree, h1, bold, thight);
+                    }
+                    @include responsive(desktop) {
+                        @include font-config(baijamjuree, hmax, bold, thight);
                     }
                     
 

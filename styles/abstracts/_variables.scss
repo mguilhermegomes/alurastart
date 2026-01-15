@@ -1,4 +1,5 @@
 $text__containers: (
+    ultra-big-large: 50rem,
     extra-big-large: 44rem,
     big-large: 40rem,
     medium-large: 34rem,
@@ -41,11 +42,11 @@ $typography: (
     baijamjuree: (
         family: ("Bai Jamjuree", sans-serif),
         sizes: (
-            hmax: (min: 3.75rem, max: 3.75rem, fluid: 1vw),
+            hmax: (min: 3.75rem, max: 3.75rem, fluid: 1vw),       //60px
             h1: (min: 2.25rem, max: 3.75rem, fluid: 4vw),        //36px---60px
-            h2: (min: 1.75rem, max: 2rem, fluid: 2.5vw),          //28px---32px
+            h2: (min: 1.75rem, max: 2rem, fluid: 2.5vw),        //28px---32px
             h3: (min: 1.45rem, max: 1.625rem, fluid: 2vw),     //23.2px---26px
-            h4: (min: 1.125rem, max: 1.25rem, fluid: 1.5vw),    //18px---20px
+            h4: (min: 1.125rem, max: 1.25rem, fluid: 1.5vw),  //18px---20px
             h5: (min: 1rem, max: 1rem, fluid: 1vw),          //16px
         ),
     ),

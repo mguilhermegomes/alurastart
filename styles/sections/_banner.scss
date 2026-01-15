@@ -18,14 +18,16 @@
             gap: 32px;
             text-align: center;
             @include responsive(desktop) {
+                align-items: flex-start;
                 text-align: start;
             }
 
             .banner__titulo {
+                max-width: get-txtcontainer(big-large);
                 color: get-color(azul-escuro);
                 @include font-config(baijamjuree, h2, bold, thight);
                 @include responsive(tablet) {
-                    @include font-config(baijamjuree, h1, bold, thight);
+                    @include font-config(baijamjuree, hmax, bold, thight);
                 }
 
                 > span {
@@ -34,6 +36,7 @@
             }
 
             .banner__descricao {
+                max-width: get-txtcontainer(large);
                 @include font-config(inter, paragraph-large, medium, default);
                 @include responsive(tablet) {
                     @include font-config(inter, paragraph-max, regular, default);

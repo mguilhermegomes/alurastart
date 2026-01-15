@@ -29,6 +29,9 @@
                     max-width: get-txtcontainer(large);
                     @include font-config(baijamjuree, h1, bold, thight);
                 }
+                @include responsive(desktop) {
+                    @include font-config(baijamjuree, hmax, bold, thight);
+                }
 
                 > span {
                     color: get-color(roxo);

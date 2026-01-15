@@ -21,10 +21,7 @@
         .cabecalho__nav {
             display: flex;
             align-items: center;
-            gap: 22px;
-            @include responsive(laptop) {
-                gap: 32px;
-            }
+            gap: 32px;
 
             .nav__links {
                 display: none;
@@ -38,13 +35,26 @@
                     gap: 24px;
 
                     .lista__item {
-                        &:nth-child(6) {
+                        &:nth-child(1) {
+                            display: none;
+                            @include responsive(desktop) {
+                                display: inline;
+                            }
+                        }
+
+                        &:nth-child(2) {
                             @include responsive(desktop) {
                                 display: none;
                             }
                         }
 
                         &:nth-child(7) {
+                            @include responsive(desktop) {
+                                display: none;
+                            }
+                        }
+
+                        &:nth-child(8) {
                             display: none;
                             @include responsive(desktop) {
                                 display: inline;

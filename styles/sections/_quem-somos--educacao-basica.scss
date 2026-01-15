@@ -10,9 +10,12 @@
         @include responsive(tablet) {
             gap: 50px;
         }
-        @include responsive(laptop) {
-            justify-content: space-between;
+        @include responsive(tablet) {
+            justify-content: center;
             flex-direction: row-reverse;
+        }
+        @include responsive(laptop) {
+            align-items: flex-start;
         }
 
         > .quem-somos__texto {
@@ -20,9 +23,14 @@
             flex-direction: column;
             align-items: center;
             @include responsive(tablet) {
+                flex-basis: 65%; //container cresce conforme o container pai aumenta
                 align-items: flex-start;
             }
             @include responsive(laptop) {
+                flex-basis: 100%;
+                max-width: get-txtcontainer(default);
+            }
+            @include responsive(desktop) {
                 max-width: get-txtcontainer(large);
             }
 
@@ -43,6 +51,9 @@
                 };
                 @include responsive(laptop) {
                     @include font-config(baijamjuree, h1, bold, thight);
+                }
+                @include responsive(desktop) {
+                    @include font-config(baijamjuree, hmax, bold, thight);
                 }
 
                 > span {

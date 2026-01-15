@@ -23,12 +23,7 @@
 .cabecalho > .container .cabecalho__nav {
   display: flex;
   align-items: center;
-  gap: 22px;
-}
-@media screen and (min-width: 1024px) {
-  .cabecalho > .container .cabecalho__nav {
-    gap: 32px;
-  }
+  gap: 32px;
 }
 .cabecalho > .container .cabecalho__nav .nav__links {
   display: none;
@@ -43,16 +38,29 @@
   align-items: center;
   gap: 24px;
 }
-@media screen and (min-width: 1200px) {
-  .cabecalho > .container .cabecalho__nav .nav__links .links__lista .lista__item:nth-child(6) {
-    display: none;
-  }
-}
-.cabecalho > .container .cabecalho__nav .nav__links .links__lista .lista__item:nth-child(7) {
+.cabecalho > .container .cabecalho__nav .nav__links .links__lista .lista__item:nth-child(1) {
   display: none;
 }
 @media screen and (min-width: 1200px) {
+  .cabecalho > .container .cabecalho__nav .nav__links .links__lista .lista__item:nth-child(1) {
+    display: inline;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cabecalho > .container .cabecalho__nav .nav__links .links__lista .lista__item:nth-child(2) {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
   .cabecalho > .container .cabecalho__nav .nav__links .links__lista .lista__item:nth-child(7) {
+    display: none;
+  }
+}
+.cabecalho > .container .cabecalho__nav .nav__links .links__lista .lista__item:nth-child(8) {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .cabecalho > .container .cabecalho__nav .nav__links .links__lista .lista__item:nth-child(8) {
     display: inline;
   }
 }
@@ -154,10 +162,12 @@
 }
 @media screen and (min-width: 1200px) {
   .banner > .container .banner__texto {
+    align-items: flex-start;
     text-align: start;
   }
 }
 .banner > .container .banner__texto .banner__titulo {
+  max-width: 40rem;
   color: #284260;
   font-family: "Bai Jamjuree", sans-serif;
   font-size: clamp(1.75rem, 2.5vw, 2rem);
@@ -167,7 +177,7 @@
 @media screen and (min-width: 768px) {
   .banner > .container .banner__texto .banner__titulo {
     font-family: "Bai Jamjuree", sans-serif;
-    font-size: clamp(2.25rem, 4vw, 3.75rem);
+    font-size: clamp(3.75rem, 1vw, 3.75rem);
     font-weight: 700;
     line-height: 1.2;
   }
@@ -176,6 +186,7 @@
   color: #c75eeb;
 }
 .banner > .container .banner__texto .banner__descricao {
+  max-width: 32rem;
   font-family: "Inter", sans-serif;
   font-size: clamp(1rem, 1.2vw, 1.25rem);
   font-weight: 500;
@@ -232,10 +243,15 @@
     gap: 50px;
   }
 }
+@media screen and (min-width: 768px) {
+  .quem-somos--educacao-basica > .container {
+    justify-content: center;
+    flex-direction: row-reverse;
+  }
+}
 @media screen and (min-width: 1024px) {
   .quem-somos--educacao-basica > .container {
-    justify-content: space-between;
-    flex-direction: row-reverse;
+    align-items: flex-start;
   }
 }
 .quem-somos--educacao-basica > .container > .quem-somos__texto {
@@ -245,10 +261,17 @@
 }
 @media screen and (min-width: 768px) {
   .quem-somos--educacao-basica > .container > .quem-somos__texto {
+    flex-basis: 65%;
     align-items: flex-start;
   }
 }
 @media screen and (min-width: 1024px) {
+  .quem-somos--educacao-basica > .container > .quem-somos__texto {
+    flex-basis: 100%;
+    max-width: 26rem;
+  }
+}
+@media screen and (min-width: 1200px) {
   .quem-somos--educacao-basica > .container > .quem-somos__texto {
     max-width: 32rem;
   }
@@ -283,6 +306,14 @@
   .quem-somos--educacao-basica > .container > .quem-somos__texto > .quem-somos__titulo {
     font-family: "Bai Jamjuree", sans-serif;
     font-size: clamp(2.25rem, 4vw, 3.75rem);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .quem-somos--educacao-basica > .container > .quem-somos__texto > .quem-somos__titulo {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: clamp(3.75rem, 1vw, 3.75rem);
     font-weight: 700;
     line-height: 1.2;
   }
@@ -357,7 +388,7 @@
 }
 .quem-somos--programacao > .container > .quem-somos__texto > .quem-somos__titulo {
   color: #284260;
-  max-width: 40rem;
+  max-width: 32rem;
   font-family: "Bai Jamjuree", sans-serif;
   font-size: clamp(1.45rem, 2vw, 1.625rem);
   font-weight: 600;
@@ -373,8 +404,18 @@
 }
 @media screen and (min-width: 1024px) {
   .quem-somos--programacao > .container > .quem-somos__texto > .quem-somos__titulo {
+    max-width: 40rem;
     font-family: "Bai Jamjuree", sans-serif;
     font-size: clamp(2.25rem, 4vw, 3.75rem);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .quem-somos--programacao > .container > .quem-somos__texto > .quem-somos__titulo {
+    max-width: 50rem;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: clamp(3.75rem, 1vw, 3.75rem);
     font-weight: 700;
     line-height: 1.2;
   }
@@ -473,6 +514,14 @@
     line-height: 1.2;
   }
 }
+@media screen and (min-width: 1200px) {
+  .sobre-nos .container .sobre-nos__texto .sobre-nos__titulo {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: clamp(3.75rem, 1vw, 3.75rem);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
 .sobre-nos .container .sobre-nos__texto .sobre-nos__titulo > span {
   color: #c75eeb;
 }
@@ -546,28 +595,24 @@
   align-items: center;
   gap: 34px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .metodologia .container:nth-child(1) {
     flex-direction: row;
     justify-content: space-between;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .metodologia .container:nth-child(1) {
-    align-items: flex-start;
   }
 }
 .metodologia .container:nth-child(1) .metodologia__texto {
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .metodologia .container:nth-child(1) .metodologia__texto {
-    max-width: 32rem;
+    flex-basis: 50%;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1024px) {
   .metodologia .container:nth-child(1) .metodologia__texto {
+    flex-basis: 100%;
     max-width: 34rem;
   }
 }
@@ -599,6 +644,14 @@
   .metodologia .container:nth-child(1) .metodologia__texto .metodologia__titulo {
     font-family: "Bai Jamjuree", sans-serif;
     font-size: clamp(2.25rem, 4vw, 3.75rem);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .metodologia .container:nth-child(1) .metodologia__texto .metodologia__titulo {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: clamp(3.75rem, 1vw, 3.75rem);
     font-weight: 700;
     line-height: 1.2;
   }
@@ -692,6 +745,14 @@
   .projetos > .container .projetos__texto .projetos__titulo {
     font-family: "Bai Jamjuree", sans-serif;
     font-size: clamp(2.25rem, 4vw, 3.75rem);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projetos > .container .projetos__texto .projetos__titulo {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: clamp(3.75rem, 1vw, 3.75rem);
     font-weight: 700;
     line-height: 1.2;
   }
