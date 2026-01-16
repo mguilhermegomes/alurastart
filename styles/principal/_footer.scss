@@ -7,6 +7,11 @@
         display: flex;
         flex-direction: column;
         gap: 40px;
+        @include responsive(tablet) {
+            flex-direction: row;
+            align-items: center;
+            gap: 48px;
+        }
 
         .rodape__logo {
             width: 140px;
@@ -19,7 +24,11 @@
 
             .rodape__info > p {
                 text-transform: uppercase;
-                @include font-config(inter, paragraph-small);
+                color: get-color(cinza-escuro);
+                @include font-config(inter, paragraph);
+                @include responsive(tablet) {
+                    @include font-config(inter, paragraph, medium);
+                }
             }
         }
 
@@ -32,11 +41,17 @@
             .lista__item {
                 &:nth-child(1) {
                     @include font-config(inter, paragraph-large, semibold);
+                    @include responsive(tablet) {
+                        @include font-config(inter, paragraph-large, semibold);
+                    }
                 }
 
                 .nav__link {
                     color: get-color(cinza-escuro);
-                    @include font-config(inter, paragraph-small);
+                    @include font-config(inter, paragraph);
+                    @include responsive(tablet) {
+                        @include font-config(inter, paragraph, medium)
+                    }
                 }
             }
         }

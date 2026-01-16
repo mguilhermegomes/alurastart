@@ -1130,6 +1130,13 @@
   flex-direction: column;
   gap: 40px;
 }
+@media screen and (min-width: 768px) {
+  .rodape .container {
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+  }
+}
 .rodape .container .rodape__logo {
   width: 140px;
 }
@@ -1140,10 +1147,19 @@
 }
 .rodape .container .rodape__texto .rodape__info > p {
   text-transform: uppercase;
+  color: #384652;
   font-family: "Inter", sans-serif;
-  font-size: clamp(0.75rem, 1vw, 0.875rem);
+  font-size: clamp(0.875rem, 1vw, 1rem);
   font-weight: 400;
   line-height: normal;
+}
+@media screen and (min-width: 768px) {
+  .rodape .container .rodape__texto .rodape__info > p {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(0.875rem, 1vw, 1rem);
+    font-weight: 500;
+    line-height: normal;
+  }
 }
 .rodape .container .rodape__links > .links__lista {
   display: flex;
@@ -1157,12 +1173,28 @@
   font-weight: 600;
   line-height: normal;
 }
+@media screen and (min-width: 768px) {
+  .rodape .container .rodape__links > .links__lista .lista__item:nth-child(1) {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(1rem, 1.2vw, 1.25rem);
+    font-weight: 600;
+    line-height: normal;
+  }
+}
 .rodape .container .rodape__links > .links__lista .lista__item .nav__link {
   color: #384652;
   font-family: "Inter", sans-serif;
-  font-size: clamp(0.75rem, 1vw, 0.875rem);
+  font-size: clamp(0.875rem, 1vw, 1rem);
   font-weight: 400;
   line-height: normal;
+}
+@media screen and (min-width: 768px) {
+  .rodape .container .rodape__links > .links__lista .lista__item .nav__link {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(0.875rem, 1vw, 1rem);
+    font-weight: 500;
+    line-height: normal;
+  }
 }
 
 *,
