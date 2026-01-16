@@ -66,6 +66,7 @@
 }
 .cabecalho > .container .cabecalho__nav .nav__links .links__lista .lista__item .nav__link {
   color: #6e859f;
+  transition: color 0.3s ease;
   font-family: "Inter", sans-serif;
   font-size: clamp(0.75rem, 1vw, 0.875rem);
   font-weight: 500;
@@ -78,6 +79,9 @@
     font-weight: 500;
     line-height: normal;
   }
+}
+.cabecalho > .container .cabecalho__nav .nav__links .links__lista .lista__item .nav__link:hover, .cabecalho > .container .cabecalho__nav .nav__links .links__lista .lista__item .nav__link:focus {
+  color: #284260;
 }
 .cabecalho > .container .cabecalho__nav .nav__acoes {
   display: flex;
@@ -98,6 +102,12 @@
   border-radius: 200px;
   padding: 1rem;
   width: 300px;
+  transition: box-shadow 0.3s ease;
+}
+.cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--conhecer:hover, .cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--conhecer:focus {
+  box-shadow: 4px 4px 20px #e699d5;
+}
+.cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--conhecer {
   padding: 0.875rem 0;
   width: 147px;
 }
@@ -126,9 +136,23 @@
   border-radius: 200px;
   padding: 1rem;
   width: 300px;
+  transition: box-shadow 0.3s ease;
+}
+.cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--entrar:hover, .cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--entrar:focus {
+  box-shadow: 4px 4px 20px #e699d5;
+}
+.cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--entrar {
   background: transparent;
   color: #c75eeb;
   border: 1px solid #c75eeb;
+  transition: border-color, color 0.3s ease;
+}
+.cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--entrar:hover, .cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--entrar:focus {
+  box-shadow: none;
+  border-color: #6C07AA;
+  color: #6C07AA;
+}
+.cabecalho > .container .cabecalho__nav .nav__acoes .acoes__link--entrar {
   display: none;
   font-family: "Inter", sans-serif;
   font-size: clamp(0.875rem, 1vw, 1rem);
@@ -211,6 +235,12 @@
   border-radius: 200px;
   padding: 1rem;
   width: 300px;
+  transition: box-shadow 0.3s ease;
+}
+.banner > .container .banner__texto .banner__acao:hover, .banner > .container .banner__texto .banner__acao:focus {
+  box-shadow: 4px 4px 20px #e699d5;
+}
+.banner > .container .banner__texto .banner__acao {
   font-family: "Inter", sans-serif;
   font-size: clamp(1rem, 1.2vw, 1.25rem);
   font-weight: 600;
@@ -338,6 +368,12 @@
   border-radius: 200px;
   padding: 1rem;
   width: 300px;
+  transition: box-shadow 0.3s ease;
+}
+.quem-somos--educacao-basica > .container > .quem-somos__texto > .quem-somos__acao:hover, .quem-somos--educacao-basica > .container > .quem-somos__texto > .quem-somos__acao:focus {
+  box-shadow: 4px 4px 20px #e699d5;
+}
+.quem-somos--educacao-basica > .container > .quem-somos__texto > .quem-somos__acao {
   font-family: "Inter", sans-serif;
   font-size: clamp(1rem, 1.2vw, 1.25rem);
   font-weight: 600;
@@ -679,9 +715,23 @@
   border-radius: 200px;
   padding: 1rem;
   width: 300px;
+  transition: box-shadow 0.3s ease;
+}
+.metodologia .container:nth-child(2) .metodologia__acao:hover, .metodologia .container:nth-child(2) .metodologia__acao:focus {
+  box-shadow: 4px 4px 20px #e699d5;
+}
+.metodologia .container:nth-child(2) .metodologia__acao {
   background: transparent;
   color: #c75eeb;
   border: 1px solid #c75eeb;
+  transition: border-color, color 0.3s ease;
+}
+.metodologia .container:nth-child(2) .metodologia__acao:hover, .metodologia .container:nth-child(2) .metodologia__acao:focus {
+  box-shadow: none;
+  border-color: #6C07AA;
+  color: #6C07AA;
+}
+.metodologia .container:nth-child(2) .metodologia__acao {
   padding: 0.875rem 3.55rem;
   margin-top: 2.5rem;
   font-family: "Inter", sans-serif;
@@ -859,6 +909,12 @@
   border-radius: 200px;
   padding: 1rem;
   width: 300px;
+  transition: box-shadow 0.3s ease;
+}
+.projetos .container__acao .projetos__acao:hover, .projetos .container__acao .projetos__acao:focus {
+  box-shadow: 4px 4px 20px #e699d5;
+}
+.projetos .container__acao .projetos__acao {
   font-family: "Inter", sans-serif;
   font-size: clamp(1rem, 1.2vw, 1.25rem);
   font-weight: 600;
@@ -1088,6 +1144,12 @@
   border-radius: 200px;
   padding: 1rem;
   width: 300px;
+  transition: box-shadow 0.3s ease;
+}
+.orcamento .container .orcamento__container .orcamento__form .form__botao:hover, .orcamento .container .orcamento__container .orcamento__form .form__botao:focus {
+  box-shadow: 4px 4px 20px #e699d5;
+}
+.orcamento .container .orcamento__container .orcamento__form .form__botao {
   align-self: center;
   width: 280px;
   border: none;
@@ -1183,6 +1245,7 @@
 }
 .rodape .container .rodape__links > .links__lista .lista__item .nav__link {
   color: #384652;
+  transition: color 0.3s ease;
   font-family: "Inter", sans-serif;
   font-size: clamp(0.875rem, 1vw, 1rem);
   font-weight: 400;

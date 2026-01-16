@@ -26,6 +26,12 @@
     border-radius: 200px;
     padding: 1rem;
     width: 300px;
+    transition: box-shadow 0.3s ease;
+
+    &:hover,
+    &:focus {
+        box-shadow: 4px 4px 20px f.get-color(rosa);
+    }
 }
 
 @mixin botao-acao-transparent {
@@ -33,6 +39,14 @@
     background: transparent;
     color: f.get-color(roxo);
     border: 1px solid f.get-color(roxo);
+    transition: border-color, color 0.3s ease;
+
+    &:hover,
+    &:focus {
+        box-shadow: none;
+        border-color: f.get-color(roxo-escuro);
+        color: f.get-color(roxo-escuro);
+    }
 }
 
 @mixin section__subtitle {

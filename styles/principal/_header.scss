@@ -63,9 +63,15 @@
 
                         .nav__link {
                             color: get-color(cinza);
+                            transition: color 0.3s ease;
                             @include font-config(inter, paragraph-small, medium);
                             @include responsive(laptop) {
                                 @include font-config(inter, paragraph, medium);
+                            }
+
+                            &:hover,
+                            &:focus {
+                                color: get-color(azul-escuro);
                             }
                         }
                     }

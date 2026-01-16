@@ -48,6 +48,7 @@
 
                 .nav__link {
                     color: get-color(cinza-escuro);
+                    transition: color 0.3s ease;
                     @include font-config(inter, paragraph);
                     @include responsive(tablet) {
                         @include font-config(inter, paragraph, medium)
