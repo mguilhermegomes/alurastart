@@ -15,6 +15,20 @@ Apesar de o layout ser fornecido pelo curso, **toda a implementação foi realiz
 
 ---
 
+## 🔗 Acesso ao Projeto
+
+O projeto está disponível online e pode ser acessado facilmente:
+
+- 🌐 **Deploy na Vercel:**  
+  [Acessar aplicação](https://mguilhermegomes-alurastart.vercel.app/)
+
+- 💻 **Repositório no GitHub:**  
+  [Ver código-fonte](https://github.com/mguilhermegomes/alurastart)
+
+O projeto foi versionado com Git e publicado no GitHub, com deploy automatizado via Vercel, permitindo fácil acesso à aplicação e ao código-fonte.
+
+---
+
 ## 🧠 Abordagem Técnica
 
 A proposta deste projeto foi ir além da simples reprodução do conteúdo do curso:
