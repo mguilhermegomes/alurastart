@@ -1108,6 +1108,12 @@
   color: #284260;
   appearance: none;
 }
+.orcamento .container .orcamento__container .orcamento__form .form__campo .campo__email:user-valid {
+  outline: 2px solid #61e061;
+}
+.orcamento .container .orcamento__container .orcamento__form .form__campo .campo__email:user-invalid {
+  outline: 2px solid #f6543b;
+}
 .orcamento .container .orcamento__container .orcamento__form .form__campo .campo__necessidades {
   background-color: #f4f7ff;
   border: none;
