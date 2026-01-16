@@ -9,8 +9,6 @@
         align-items: center;
         @include responsive(tablet) {
             gap: 50px;
-        }
-        @include responsive(tablet) {
             justify-content: center;
             flex-direction: row-reverse;
         }
