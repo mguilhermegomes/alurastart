@@ -59,6 +59,8 @@ Após finalizar o projeto, o conteúdo do curso foi utilizado como **validação
   - Ajustes progressivos de tipografia
 - **Flexbox**
   - Alinhamento e distribuição de elementos
+- **SwiperJS**
+  - Carrossel de cards
 
 ---
 
